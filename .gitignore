@@ -1,4 +1,5 @@
 book
+test
 src/Figures/**/*.png
 src/Figures/**/*.pov
 !src/Figures/*.png 

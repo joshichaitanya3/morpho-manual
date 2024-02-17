@@ -13,6 +13,7 @@ Then, you need to generate the figures and the reference section by running the 
 ```bash
 python build.py
 ```
+(Make sure to change the `libmorphofolder` path to your local libmorpho folder in the `build.py` script. In the future, we will auto-download the help from GitHub.)
 
 Finally, you can build the book by running `mdbook`:
 ```bash
