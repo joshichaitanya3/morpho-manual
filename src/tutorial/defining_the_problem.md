@@ -1,13 +1,13 @@
 ## Defining the problem
 
 We now turn to setting up the problem. Each term in the energy
-functional [(1)](../tutorial.md#free-energy) is represented by a corresponding *functional*
+functional [(1)](../tutorial.md#eq:free) is represented by a corresponding *functional*
 object, which acts on a `Mesh` (and possibly a `Field`) to calculate an
 integral quantity such as an energy; Functional objects are also
 responsible for calculating gradients of the energy with respect to
 vertex positions and components of Fields.
 
-Let's take the terms in [(1)](../tutorial.md#free-energy) one by one: To represent the nematic elasticity we
+Let's take the terms in [(1)](../tutorial.md#eq:free) one by one: To represent the nematic elasticity we
 create a `Nematic` object:
 
     var lf=Nematic(nn)

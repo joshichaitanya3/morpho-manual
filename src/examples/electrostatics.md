@@ -7,30 +7,37 @@ problem.
 
 Suppose we want to solve Laplace's equation, 
 
-#### Laplace's equation
 $$\nabla^{2}\phi=0$$ 
 
 on a square domain \\(C\\) defined by \\(-L/2\leq x\leq L/2\\) and
 \\(-L/2\leq y\leq L/2\\). An equivalent formulation suitable for *morpho* is
 to minimize, 
 
-#### Electrostatic energy
-$$\int_{C}\left|\nabla\phi\right|^{2}dA\label{eq:el1}$$
+$$
+\begin{equation}
+\int_{C}\left|\nabla\phi\right|^{2}dA
+\label{eq:el1}
+\end{equation}
+$$
 
 with respect to \\(\phi\\).
 
+
 We can show the two are equivalent by applying calculus of
-variations[^9] to the [Laplace's equation](#laplaces-equation),
+variations[^9] to the \eqref{eq:el1},
 
 $$ \delta\int_{C}\left|\nabla\phi\right|^{2}dA =\int_{C}\delta\left|\nabla\phi\right|^{2}dA $$
 $$ =\int_{C}\frac{\partial}{\partial\nabla\phi}\left|\nabla\phi\right|^{2}\cdot\delta\nabla\phi dA,$$ 
 
 and integrating by parts, 
 
-#### Bulk variations
 
-$$ \int_{C}\frac{\partial}{\partial\nabla\phi}\left|\nabla\phi\right|^{2}\cdot\delta\nabla\phi dA =\int_{\partial C}\nabla\phi\cdot\hat{\mathbf{s}}\delta\phi dl-\int_{C}\nabla\cdot\frac{\partial}{\partial\nabla\phi}\left|\nabla\phi\right|^{2}\delta\phi dA $$
-$$ =\int_{\partial C}\nabla\phi\cdot\hat{\mathbf{s}}\delta\phi dl-\int_{C}\nabla^{2}\phi\delta\phi dA,$$
+$$
+\begin{align}
+\int_{C}\frac{\partial}{\partial\nabla\phi}\left|\nabla\phi\right|^{2}\cdot\delta\nabla\phi dA & =\int_{\partial C}\nabla\phi\cdot\hat{\mathbf{s}}\delta\phi dl-\int_{C}\nabla\cdot\frac{\partial}{\partial\nabla\phi}\left|\nabla\phi\right|^{2}\delta\phi dA\nonumber \\\\
+ & =\int_{\partial C}\nabla\phi\cdot\hat{\mathbf{s}}\delta\phi dl-\int_{C}\nabla^{2}\phi\delta\phi dA,\label{eq:bulkvariations}
+\end{align}
+$$
 
 where \\(\hat{\mathbf{s}}\\) is the outward normal. Hence,
 allowing for arbitrary variations \\(\delta\phi\\), in order for the bulk
@@ -42,18 +49,25 @@ energies, solving \\(\nabla^{2}\phi=0\\) in \\(C\\) subject to
 \\(\nabla\phi\cdot\hat{\mathbf{s}}=0\\) on \\(\partial C\\) yields the family of
 uniform constant solutions \\(\phi=\text{const}.\\)
 
-To impose boundary data, we will supplement the [Laplace's equation](#laplaces-equation) with
+To impose boundary data, we will supplement \eqref{eq:el1} with
 the additional functional,
 
-#### Boundary
-$$\lambda\int_{\partial C}\left[\phi-\phi_{0}(\mathbf{x})\right]^{2}dl\label{eq:anchoring}$$
+$$
+\begin{equation}
+\lambda\int_{\partial C}\left[\phi-\phi_{0}(\mathbf{x})\right]^{2}dl\label{eq:anchoring}
+\end{equation}
+$$
 where the function \\(\phi_{0}\\) represents some imposed boundary
 potential. Taking variations of this functional, 
 
-$$\delta\lambda\int_{\partial C}\left[\phi-\phi_{0}(\mathbf{x})\right]^{2}dl  =\lambda\int_{\partial C}\frac{\partial}{\partial\phi}\left[\phi-\phi_{0}(\mathbf{x})\right]^{2}\delta\phi dl $$
-$$ =\lambda\int_{\partial C}2\left[\phi-\phi_{0}(\mathbf{x})\right]\delta\phi dl $$
+$$
+\begin{align}
+\delta\lambda\int_{\partial C}\left[\phi-\phi_{0}(\mathbf{x})\right]^{2}dl & =\lambda\int_{\partial C}\frac{\partial}{\partial\phi}\left[\phi-\phi_{0}(\mathbf{x})\right]^{2}\delta\phi dl\nonumber \\\\
+& =\lambda\int_{\partial C}2\left[\phi-\phi_{0}(\mathbf{x})\right]\delta\phi dl\label{eq:boundary}
+\end{align}
+$$
 
-Collecting the boundary terms from the [bulk variations](#bulk-variations) and the [boundary data](#boundary), we obtain the equivalent boundary condition
+Collecting the boundary terms from \eqref{eq:bulkvariations} and \eqref{eq:boundary}, we obtain the equivalent boundary condition
 on \\(\phi\\),
 $$\nabla\phi\cdot\hat{\mathbf{s}}+2\lambda(\phi-\phi_{0})=0,$$ which is
 known as a Robin boundary condition. As \\(\lambda\to\infty\\),
@@ -81,8 +95,8 @@ some interior edges. To ensure we only have boundary edges in our
 selections, we find the intersection of `bnd1` and `bnd`, and similarly
 for `bnd2`.
 
-The problem setup involves adding the [electrostatic energy](#electrostatic-energy) using
-`GradSq` and the [boundary terms](#boundary) as `LineIntegral`s.
+The problem setup involves adding the electrostatic energy Eq.\eqref{eq:el1} using
+`GradSq` and the boundary terms Eq.\eqref{eq:anchoring} as `LineIntegral`s.
 
     var problem = OptimizationProblem(mesh)
     var le = GradSq(phi)
