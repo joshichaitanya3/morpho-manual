@@ -79,3 +79,5 @@
     - [Plot](./reference/nested/plot.md)
     - [POVRay](./reference/nested/povray.md)
     - [VTK](./reference/nested/vtk.md)
+---
+[mdBook Notes](./mdbook_notes.md)
