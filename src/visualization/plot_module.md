@@ -1,4 +1,4 @@
-## The plot module 
+## The plot module
 
 <figure id="fig:PlotMesh">
 <div class="centering">
@@ -111,7 +111,7 @@ label="fig:PlotSelection"></span>Using plotselection.</strong>
 boundary.</figcaption>
 </figure>
 
-When setting up a problem in *morpho*, it's very common to use Selection
+When setting up a problem in _morpho_, it's very common to use Selection
 objects to apply Functionals to limited parts of a Mesh. It's essential
 to check that the Selections are correct, and `plotselection` provides
 an easy way to do this. To illustrate this, let's select the lower right
@@ -142,9 +142,11 @@ points,
 
     var m = AreaMesh(fn (u,v) [u, v, 0], -1..1:0.1, -1..1:0.1)
 
-and a corresponding Field object[^6]:
+and a corresponding Field object:
 
     var f = Field(m, fn (x,y,z) sin(Pi*x)*sin(Pi*y))
+
+> It's actually the third lowest energy eigenmode of a square drum, or equivalently the \\((1,1)\\) state of a 2D infinite square well in quantum mechanics.
 
 By default, `plotfield` draws points at which the Field is defined, and
 colors them by the value as in Fig.
@@ -172,8 +174,11 @@ The scalebar is the then supplied as an optional argument to
 The `color` module supplies a number of colormaps that you can try:
 ViridisMap is used by default, but PlasmaMap, MagmaMap and InfernoMap
 are also recommended and have been specially formulated to be accessible
-to users with limited color perception[^7]. GrayMap and HueMap are also
-available.
+to users with limited color perception.
+
+> The _morpho_ versions are adapted from _Simon Garnier, Noam Ross, Robert Rudis, Antônio P. Camargo, Marco Sciaini, and Cédric Scherer (2021). viridis(Lite) - Colorblind-Friendly Color Maps for R. viridis package version 0.6.2._
+
+GrayMap and HueMap are also available.
 
 <figure id="fig:PlotField">
 <div class="centering">

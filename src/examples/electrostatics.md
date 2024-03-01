@@ -5,13 +5,13 @@ adaptive refinement, and provides a useful example of how to cast a
 problem that is normally thought of as solving a PDE as an optimization
 problem.
 
-Suppose we want to solve Laplace's equation, 
+Suppose we want to solve Laplace's equation,
 
-$$\nabla^{2}\phi=0$$ 
+$$\nabla^{2}\phi=0$$
 
 on a square domain \\(C\\) defined by \\(-L/2\leq x\leq L/2\\) and
-\\(-L/2\leq y\leq L/2\\). An equivalent formulation suitable for *morpho* is
-to minimize, 
+\\(-L/2\leq y\leq L/2\\). An equivalent formulation suitable for _morpho_ is
+to minimize,
 
 $$
 \begin{equation}
@@ -22,15 +22,13 @@ $$
 
 with respect to \\(\phi\\).
 
-
 We can show the two are equivalent by applying calculus of
-variations[^9] to the \eqref{eq:el1},
+variations to the \eqref{eq:el1},
 
-$$ \delta\int_{C}\left|\nabla\phi\right|^{2}dA =\int_{C}\delta\left|\nabla\phi\right|^{2}dA $$
-$$ =\int_{C}\frac{\partial}{\partial\nabla\phi}\left|\nabla\phi\right|^{2}\cdot\delta\nabla\phi dA,$$ 
+$$ \delta\int*{C}\left|\nabla\phi\right|^{2}dA =\int*{C}\delta\left|\nabla\phi\right|^{2}dA $$
+$$ =\int\_{C}\frac{\partial}{\partial\nabla\phi}\left|\nabla\phi\right|^{2}\cdot\delta\nabla\phi dA,$$
 
-and integrating by parts, 
-
+and integrating by parts,
 
 $$
 \begin{align}
@@ -38,6 +36,8 @@ $$
  & =\int_{\partial C}\nabla\phi\cdot\hat{\mathbf{s}}\delta\phi dl-\int_{C}\nabla^{2}\phi\delta\phi dA,\label{eq:bulkvariations}
 \end{align}
 $$
+
+> **Note** If you're not familiar with calculus of variations, feel free to skip paragraphs that refer to "variations". The calculus of variations generalizes calculus from differentiating with respect to variables to differentiating with respect to functions.
 
 where \\(\hat{\mathbf{s}}\\) is the outward normal. Hence,
 allowing for arbitrary variations \\(\delta\phi\\), in order for the bulk
@@ -57,8 +57,9 @@ $$
 \lambda\int_{\partial C}\left[\phi-\phi_{0}(\mathbf{x})\right]^{2}dl\label{eq:anchoring}
 \end{equation}
 $$
-where the function \\(\phi_{0}\\) represents some imposed boundary
-potential. Taking variations of this functional, 
+
+where the function \\(\phi\_{0}\\) represents some imposed boundary
+potential. Taking variations of this functional,
 
 $$
 \begin{align}
@@ -71,12 +72,12 @@ Collecting the boundary terms from \eqref{eq:bulkvariations} and \eqref{eq:bound
 on \\(\phi\\),
 $$\nabla\phi\cdot\hat{\mathbf{s}}+2\lambda(\phi-\phi_{0})=0,$$ which is
 known as a Robin boundary condition. As \\(\lambda\to\infty\\),
-\\(\phi\to\phi_{0}\\) on the boundary, recovering a fixed boundary or
+\\(\phi\to\phi_0\\) on the boundary, recovering a fixed boundary or
 Dirichlet condition, while as \\(\lambda\to0\\), we recover the Neumann
 conditions discussed earlier.
 
-In the example, we will set \\(\phi_{0}=0\\) on the left and lower boundary
-and \\(\phi_{0}=1\\) on the right and upper boundary, and use \\(\lambda=100\\).
+In the example, we will set \\(\phi_0=0\\) on the left and lower boundary
+and \\(\phi_0=1\\) on the right and upper boundary, and use \\(\lambda=100\\).
 
 The code illustrates a few *morpho* tricks. First, the following code is
 used to select the left/bottom and upper/right sides of the mesh:
@@ -105,7 +106,7 @@ The problem setup involves adding the electrostatic energy Eq.\eqref{eq:el1} usi
     var lt1 = LineIntegral(fn (x, v) (v-v1)^2, phi)
     problem.addenergy(lt1, selection=bnd1, prefactor=100)
     var lt2 = LineIntegral(fn (x, v) (v-v2)^2, phi)
-    problem.addenergy(lt2, selection=bnd2, prefactor=100) 
+    problem.addenergy(lt2, selection=bnd2, prefactor=100)
 
 Optimization is done with a `FieldOptimizer`:
 
@@ -124,11 +125,11 @@ is changingand find the mean energy per element. We then create a
 Selection and manually select elements that have an electrostatic energy
 more than \\(1.5\times\\) the mean.
 
-    // Select elements that have an above average contribution to the energy 
+    // Select elements that have an above average contribution to the energy
     var en = le.integrand(phi) // energy in each element
     var mean = en.sum()/en.count() // mean energy per element
     var srefine = Selection(mesh)
-    for (id in 0...en.count()) if (en[0,id]>1.5*mean) srefine[2,id]=true 
+    for (id in 0...en.count()) if (en[0,id]>1.5*mean) srefine[2,id]=true
     // identify large contributions
 
 Refinement is then performed with a MeshRefiner object from the
@@ -184,4 +185,3 @@ square domain</strong> (left) mesh after 10 iterations of adaptive
 refinement and optimization and (right) the resulting solution. Grade 1
 elements are shown to emphasize the mesh structure.</figcaption>
 </figure>
-
