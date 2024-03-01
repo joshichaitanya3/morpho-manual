@@ -4,17 +4,21 @@ The `meshgen` module conveniently produces high quality meshes for many
 kinds of domain. It follows the builder pattern with a MeshGen helper
 object that performs the construction. To use `meshgen`, the user must
 provide a scalar function that is positive everywhere that they want to
-be meshed[^5]. For example, the interior of the unit disk in two
+be meshed.
+
+> **Note** One example is referred to in the literature as a _signed distance function_, which is the Euclidean distance of a given point \\(x\\) to the boundary of a set \\(\Omega\\) with the sign positive if \\(x\\) is in the interior of \\(\Omega\\). MeshGen does not require signed distance functions, but accepts any continuous and reasonably smooth function.
+
+For example, the interior of the unit disk in two
 dimensions, is described by the function $$f(x,y)=1-(x^{2}+y^{2}).$$ To
-create the corresponding Mesh, we must first specify a suitable *morpho*
+create the corresponding Mesh, we must first specify a suitable _morpho_
 function that describes the domain. This function will be called
 repeatedly by MeshGen, which will pass it a position vector `x`. Hence,
 the \\((x,y)\\) components must be accessed from the argument `x` by
 indexing:
 
 ```javascript
-fn disk(x) { 
-    return 1-(x[0]^2+x[1]^2) 
+fn disk(x) {
+    return 1-(x[0]^2+x[1]^2)
 }
 ```
 
@@ -32,7 +36,7 @@ resolution.
 Finally, we create the Mesh by calling the build method:
 
 ```javascript
-var m = mg.build() 
+var m = mg.build();
 ```
 
 The resulting Mesh is shown in Fig.
@@ -60,7 +64,7 @@ constructor. For example, this code creates an ellipse as shown in Fig.
 [5.2](#fig:MeshGen-2),
 left panel:
 
-    var e0 = Domain(fn (x) -((x[0]/2)^2+x[1]^2-1)) 
+    var e0 = Domain(fn (x) -((x[0]/2)^2+x[1]^2-1))
     var mg = MeshGen(e0, [-2..2:0.2, -1..1:0.2])
     var m = mg.build()
 
@@ -98,7 +102,7 @@ Three dimensional meshes are created very similarly. Here we create a
 spherical mesh, displayed in Fig.
 [5.3](#fig:MeshGen-3)
 
-    var dh = 0.2 
+    var dh = 0.2
     var dom = Domain(fn (x) -(x[0]^2+x[1]^2+x[2]^2-1))
     var mg = MeshGen(dom, [-1..1:dh, -1..1:dh, -1..1:dh])
     var m = mg.build()

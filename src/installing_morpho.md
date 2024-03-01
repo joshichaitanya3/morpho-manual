@@ -1,18 +1,18 @@
-# Installing *Morpho*
+# Installing _Morpho_
 
-*Morpho* is hosted on a publicly available github repository
+_Morpho_ is hosted on a publicly available github repository
 <https://github.com/Morpho-lang/morpho>. We are continuously working on
-improving *morpho* installation. With this release, *morpho* on macOS
+improving _morpho_ installation. With this release, _morpho_ on macOS
 now has a streamlined installation process using homebrew. Other
 platforms must be installed from source and we hope to provide packages
 for future releases. Instructions for different platforms are provided
 below.
 
-### Where *morpho* installation puts things
+### Where _morpho_ installation puts things
 
-A *morpho* installation includes help files, modules, and other
+A _morpho_ installation includes help files, modules, and other
 resources. By default, these are installed in the **/usr/local/** file
-structure[^1], including in the following places:
+structure, including in the following places:
 
 **/usr/local/bin** : The morpho and morphoview executables are placed here.
 
@@ -22,7 +22,9 @@ structure[^1], including in the following places:
 
 **/usr/local/lib/morpho** : Morpho extensions.
 
-It's possible to build *morpho* to use different locations for resources
+> **Note**: On the macOS, these files are contained within the homebrew system.
+
+It's possible to build _morpho_ to use different locations for resources
 and the binary. To do so, set the `MORPHORESOURCESDIR` option when you
 run make, e.g.
 
@@ -30,19 +32,21 @@ run make, e.g.
 
 where X is the base folder you wish to use, i.e. the replacement for
 **/usr/local**. Subfolders will be created by the installer. To control
-where the *morpho* binary is placed, also set the `DESTDIR` option,
+where the _morpho_ binary is placed, also set the `DESTDIR` option,
 
     sudo make MORPHORESOURCESDIR=X DESTDIR=Y install
 
 ### Dependencies
 
-*Morpho* leverages a few libraries to provide certain functionality:
+_Morpho_ leverages a few libraries to provide certain functionality:
 
 **glfw** : is used to provide gui functionality for an interactive visualization application, `morphoview`.
 
 **blas/lapack** : are used for dense linear algebra.
 
-**suitesparse** : is used for sparse linear algebra[^2].
+**suitesparse** : is used for sparse linear algebra.
+
+> See <https://people.engr.tamu.edu/davis/suitesparse.html> and publications for details
 
 **freetype** : provides text display.
 
@@ -54,7 +58,7 @@ The recommended approach to installing morpho on macOS is to use the
 [Homebrew](https://brew.sh) package manager.
 
 1.  If you have a previous installation of morpho, we recommend you
-    remove it by following the instructions for uninstalling *morpho*
+    remove it by following the instructions for uninstalling _morpho_
     below.
 
 2.  Install [Homebrew](https://brew.sh), following instructions on the
@@ -109,10 +113,12 @@ with the sudo command:
         git clone https://github.com/Morpho-lang/morpho.git
 
 5.  Navigate to the `morpho5` folder within the downloaded repository
-    and build the application[^3]
+    and build the application
 
         cd morpho/morpho5
         make -f Makefile.m1 install
+
+> Some users may need to use `sudo make install`
 
 6.  Navigate to the `morphoview` folder and build the viewer application
 
@@ -142,7 +148,7 @@ distributions you will need to find the equivalent packages.
 
         sudo apt install build-essential
 
-3.  Install *morpho*'s dependencies using your distribution's package
+3.  Install _morpho_'s dependencies using your distribution's package
     manager (or manually if you prefer):
 
         sudo apt install libglfw3-dev libsuitesparse-dev liblapacke povraylibfreetype6-dev
@@ -178,7 +184,7 @@ Follow all the steps in this link to ensure that graphics are working.
 
 #### Install Morpho
 
-Once the Ubuntu terminal is working in Windows, you can install *morpho*
+Once the Ubuntu terminal is working in Windows, you can install _morpho_
 the same way as in Linux by running the commands in the instructions in
 the Ubuntu terminal.
 
@@ -217,10 +223,10 @@ the commands below are run in the Ubuntu terminal.
 
     To set the DISPLAY variable on login type
 
-        echo export DISPLAY=localhost:0 >> ~/.bashrc 
+        echo export DISPLAY=localhost:0 >> ~/.bashrc
 
-    *\[Note that this assumes you are using bash as your terminal; you
-    will may to adjust this line for other terminals\].*
+    _\[Note that this assumes you are using bash as your terminal; you
+    will may to adjust this line for other terminals\]._
 
 4.  Test that the window system is working by running
 
@@ -239,47 +245,45 @@ the commands below are run in the Ubuntu terminal.
     and minimizing electric potential. It should generate an interactive
     figure of points on a sphere.
 
-### Updating *morpho*
+### Updating _morpho_
 
-As new versions of *morpho* are released, you will likely want to
+As new versions of _morpho_ are released, you will likely want to
 upgrade to the latest version. From the terminal:
 
--   If you used homebrew to install morpho, simply type,
+- If you used homebrew to install morpho, simply type,
 
-        brew upgrade morpho
+      brew upgrade morpho
 
--   If you installed *morpho* manually, and still have the git
-    repository folder on your computer, navigate to this with `cd` and
-    type,
+- If you installed _morpho_ manually, and still have the git
+  repository folder on your computer, navigate to this with `cd` and
+  type,
 
-        git pull
+      git pull
 
-    which downloads any updates. You can then follow the above
-    instructions to recompile *morpho.* It's not necessary to reinstall
-    dependencies, but note that some new releases of *morpho* may
-    require additional dependencies.
+  which downloads any updates. You can then follow the above
+  instructions to recompile _morpho._ It's not necessary to reinstall
+  dependencies, but note that some new releases of _morpho_ may
+  require additional dependencies.
 
--   If you no longer have the original *morpho* git repository folder
-    from which you installed morpho, simply rerun the installation from
-    scratch as above. You shouldn't need to reinstall dependencies.
+- If you no longer have the original _morpho_ git repository folder
+  from which you installed morpho, simply rerun the installation from
+  scratch as above. You shouldn't need to reinstall dependencies.
 
-### Uninstalling *morpho*
+### Uninstalling _morpho_
 
 If you wish to uninstall morpho, you can do so simply from the terminal
 application.
 
--   If you used homebrew to install morpho, simply type
+- If you used homebrew to install morpho, simply type
 
-        brew uninstall morpho
+      brew uninstall morpho
 
--   Alternatively, if you did a manual install, you can remove
-    everything with
+- Alternatively, if you did a manual install, you can remove
+  everything with
 
-        rm /usr/local/bin/morpho
-        rm /usr/local/bin/morphoview
-        rm -r /usr/local/share/morpho
-        rm -r /usr/local/lib/morpho
+      rm /usr/local/bin/morpho
+      rm /usr/local/bin/morphoview
+      rm -r /usr/local/share/morpho
+      rm -r /usr/local/lib/morpho
 
-    You may need to prefix these with `sudo`.
-
-[^1]: On the macOS, these files are contained within the homebrew system
+  You may need to prefix these with `sudo`.
