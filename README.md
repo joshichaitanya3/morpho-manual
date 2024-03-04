@@ -1,7 +1,7 @@
 # morpho-manual
 Manual for the Morpho language
 
-This is a translation of the Morpho manual from the original TeX to an mdBook format.
+This is a version of the [Morpho](https://github.com/Morpho-lang/morpho) manual converted from the original LyX/TeX to an mdBook format.
 
 To build the book, you need to have [`mdbook`](https://github.com/rust-lang/mdBook) installed. You can install it with `cargo`:
 
@@ -13,7 +13,7 @@ Then, you need to generate the figures and the reference section by running the 
 ```bash
 python build.py
 ```
-(Make sure to change the `libmorphofolder` path to your local libmorpho folder in the `build.py` script. In the future, we will auto-download the help from GitHub.)
+(Make sure to change the `libmorphofolder` path to your local libmorpho folder in the `build.py` script. In the future, we will auto-download the [help](https://github.com/Morpho-lang/morpho/tree/main/morpho5/docs) from GitHub.)
 
 Finally, you can build the book by running `mdbook`:
 ```bash
