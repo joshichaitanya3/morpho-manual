@@ -59,6 +59,7 @@
     - [Range](./reference/nested/range.md)
     - [Sparse](./reference/nested/sparse.md)
     - [String](./reference/nested/string.md)
+    - [Tuple](./reference/nested/tuple.md)
   - [Computational Geometry](./reference/computational_geometry.md)
     - [Field](./reference/nested/field.md)
     - [Functionals](./reference/nested/functionals.md)

@@ -79,7 +79,7 @@ conditions discussed earlier.
 In the example, we will set \\(\phi_0=0\\) on the left and lower boundary
 and \\(\phi_0=1\\) on the right and upper boundary, and use \\(\lambda=100\\).
 
-The code illustrates a few *morpho* tricks. First, the following code is
+The code illustrates a few _morpho_ tricks. First, the following code is
 used to select the left/bottom and upper/right sides of the mesh:
 
     var bnd = Selection(mesh, boundary=true)
@@ -116,7 +116,7 @@ Optimization is done with a `FieldOptimizer`:
 The problem as posed requires \\(\phi\\) to very sharply change in the upper
 left and lower right cornes as the imposed potential changes, but far
 away from these \\(\phi\\) changes much more slowly. We would like therefore
-to perform *adaptive refinement*, refining the mesh only in places where
+to perform _adaptive refinement_, refining the mesh only in places where
 \\(\phi\\) is rapidly changing and using coarse elements elsewhere.
 
 To identify elements to refine, we compute the electrostatic energy in
@@ -134,7 +134,7 @@ more than \\(1.5\times\\) the mean.
 
 Refinement is then performed with a MeshRefiner object from the
 `meshtools` module, which we create with a list of both the mesh to
-refine *and* all quantities that refer to the mesh:
+refine _and_ all quantities that refer to the mesh:
 
     var ref = MeshRefiner([mesh, phi, bnd, bnd1, bnd2])
 
