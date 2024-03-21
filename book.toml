@@ -6,4 +6,7 @@ src = "src"
 title = "Morpho Manual"
 [output.html]
 mathjax-support = true
+additional-css = ["theme/css/language-picker.css"]
 git-repository-url = "https://github.com/joshichaitanya3/morpho-manual"
+
+[preprocessor.gettext]
