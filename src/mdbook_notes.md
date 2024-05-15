@@ -1,6 +1,6 @@
-# mdBook Notes
+# About this online version
 
-This is a conversion of the [Morpho](https://github.com/Morpho-lang/morpho) [manual](https://github.com/Morpho-lang/morpho/blob/main/manual/manual.pdf) from the original LyX/TeX to an `mdBook` format.
+This is a conversion of the [Morpho](https://github.com/Morpho-lang/morpho) manual from the original [LyX/TeX](https://github.com/Morpho-lang/morpho-manual) to an `mdBook` format.
 
 *Morpho* is designed by Prof. Timothy J. Atherton at Tufts University. This conversion is my hobby-work done during my time at Tufts as a postdoctoral scholar with him.
 

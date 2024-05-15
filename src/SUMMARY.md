@@ -89,4 +89,4 @@
     - [POVRay](./reference/nested/povray.md)
     - [VTK](./reference/nested/vtk.md)
 ---
-[mdBook Notes](./mdbook_notes.md)
+[About this online version](./mdbook_notes.md)
