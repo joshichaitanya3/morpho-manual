@@ -56,7 +56,7 @@ package manager.
         sudo apt update
         sudo apt upgrade
         sudo apt install build-essential
-        sudo apt install libglfw3-dev libsuitesparse-dev liblapacke povray libfreetype6-dev libunistring-dev
+        sudo apt install libglfw3-dev libsuitesparse-dev liblapacke-dev povray libfreetype6-dev libunistring-dev
 
 #### Build the morpho shared library
 
