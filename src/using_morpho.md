@@ -9,46 +9,34 @@ commands.
 
 To run a program, simply run morpho with the name of the file,
 
-    morpho5 script.morpho
+    morpho6 script.morpho
 
 *Morpho* supports a number of switches:
 
--w
+**-w** : Run *morpho* with more than one worker thread, e.g. `-w 4` runs morpho with 4 threads.
 
-:   Run *morpho* with more than one worker thread, e.g. `-w 4` runs
-    morpho with 4 threads.
+**-D**: Display disassembly of the program without running it. *\[See developer guide\]*
 
--D
+**-d** : Debugging mode. Morpho will stop and enter the debugger whenever a `@` is encountered in the source. *\[See developer guide\]*
 
-:   Display disassembly of the program without running it. *\[See
-    developer guide\]*
-
--d
-
-:   Debugging mode. Morpho will stop and enter the debugger whenever a
-    `@` is encountered in the source. *\[See developer guide\]*
-
--p
-
-:   Profile the program execution. Useful to identify performance
-    bottlenecks. *\[See developer guide\]*
+**-p** : Profile the program execution. Useful to identify performance bottlenecks. *\[See developer guide\]*
 
 ## Interactive mode
 
 To use *morpho* interactively, simply load the *Terminal* application
 (or equivalent on your system) and type
 
-    morpho5
+    morpho6
 
 #### Command line interface for Morpho
 ![Command line interface for Morpho](./Figures/commandline.jpg)
 
-As shown in the figure above, (Fig. [fig:cli](#Command-line-interface-for-Morpho)), you'll be greeted by a brief welcome and a
-prompt \> inviting you to enter *morpho* commands. For now, try a
+As shown in the figure above, you'll be greeted by a brief welcome and a
+prompt `>` inviting you to enter *morpho* commands. For now, try a
 classic:
-
-    print "Hello World"
-
+```javascript
+print "Hello World"
+```
 which will display `Hello World` as output. More information about the
 *morpho* language is provided in the Reference section, especially
 chapter [Language](./reference/language.md) if you're familiar with C-like languages
