@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Morpho Manual\n"
 "POT-Creation-Date: 2024-05-15T17:45:18-04:00\n"
-"PO-Revision-Date: 2024-05-29 09:50-0600\n"
+"PO-Revision-Date: 2024-05-29 12:59-0600\n"
 "Last-Translator: Emmanuel Flores <eq.emmanuel.137@gmail.com>\n"
 "Language-Team: Spanish <es@tp.org.es>\n"
 "Language: es\n"
@@ -248,7 +248,6 @@ msgid "Errors"
 msgstr "Errores"
 
 #: src/SUMMARY.md:59
-#, fuzzy
 msgid "Built-in Functions"
 msgstr "Funciones integradas"
 
@@ -3020,7 +3019,6 @@ msgstr ""
 "con 'addgrade' si es necesario. También crearemos un campo escalar simple:"
 
 #: src/working_with_meshes/slicing_meshes.md:13
-#, fuzzy
 msgid ""
 "To take a slice, first create a MeshSlicer object with the mesh we want to "
 "slice:"
@@ -3029,30 +3027,27 @@ msgstr ""
 "queremos cortar:"
 
 #: src/working_with_meshes/slicing_meshes.md:18
-#, fuzzy
 msgid ""
 "Then call the `slice` method, which requires us to specify a slicing plane. "
 "Planes are defined by a point \\\\((x,y,z)\\\\) and a normal vector \\"
 "\\((n\\_{x},n\\_{y},n\\_{z})\\\\), which are passed as arguments:"
 msgstr ""
-"A continuación, llame al método 'slice', que requiere que especifiquemos un "
+"A continuación, llame al método `slice`, que requiere que especifiquemos un "
 "plano de corte. Los planos se definen mediante un punto \\\\((x,y,z)\\\\) y "
 "un vector normal \\\\((n\\_{x},n\\_{y},n\\_{z})\\\\), que se pasan como "
 "argumentos:"
 
 #: src/working_with_meshes/slicing_meshes.md:22
-#, fuzzy
 msgid ""
 "```\n"
 "var slc=ms.slice([0,0,0],[0,0,1]) // position, normal\n"
 "```"
 msgstr ""
 "```\n"
-"var slc=ms.slice([0,0,0],[0,0,1]) // posición, normal\n"
+"var slc=ms.slice([0,0,0],[0,0,1]) // position, normal\n"
 "```"
 
 #: src/working_with_meshes/slicing_meshes.md:24
-#, fuzzy
 msgid ""
 "After taking a slice, we can then slice any number of Field objects as well:"
 msgstr ""
@@ -3060,7 +3055,6 @@ msgstr ""
 "objetos Field:"
 
 #: src/working_with_meshes/slicing_meshes.md:29
-#, fuzzy
 msgid ""
 "A single MeshSlicer can take any number of slices from the same Mesh; "
 "`slicefield` always uses the most recent slice taken. Results from the "
@@ -3070,7 +3064,7 @@ msgid ""
 "intended mostly for visualization purposes rather than use in calculations."
 msgstr ""
 "Un solo MeshSlicer puede tomar cualquier número de sectores de la misma "
-"malla; 'slicefield' siempre utiliza el segmento más reciente tomado. Los "
+"malla; `slicefield` siempre utiliza el segmento más reciente tomado. Los "
 "resultados del ejemplo se muestran en la Fig. [5.12] (#fig:MeshSlicer). Como "
 "se puede ver, los resultados de cortar una malla suelen producir mallas que "
 "son irregulares, con triángulos estrechos y elementos de tamaño desigual. "
@@ -3078,7 +3072,6 @@ msgstr ""
 "visualización en lugar de su uso en cálculos."
 
 #: src/visualization.md:3
-#, fuzzy
 msgid ""
 "This chapter describes ways to use _morpho_ to visualize output. Easy to use "
 "functions to visualize geometric objects are found in the `plot` module, "
@@ -3088,35 +3081,31 @@ msgid ""
 msgstr ""
 "En este capítulo se describen las formas de utilizar _morpho_ para "
 "visualizar la salida. Las funciones fáciles de usar para visualizar objetos "
-"geométricos se encuentran en el módulo 'plot', mientras que puede dibujar "
-"objetos arbitrarios usando el módulo 'gráficos'. La calidad de la "
-"publicación se puede generar cómodamente utilizando el módulo 'povray'."
+"geométricos se encuentran en el módulo `plot`, mientras que puede dibujar "
+"objetos arbitrarios usando el módulo `gráficos`. La calidad de la "
+"publicación se puede generar cómodamente utilizando el módulo `povray`."
 
 #: src/visualization/plot_module.md:21
-#, fuzzy
 msgid ""
 "The `plot` module offers a convenient way to visualize Meshes, Fields and "
 "Selections. To illustrate its use, we'll create a simple Mesh,"
 msgstr ""
-"El módulo 'plot' ofrece una forma conveniente de visualizar mallas, campos y "
+"El módulo `plot` ofrece una forma conveniente de visualizar mallas, campos y "
 "selecciones. Para ilustrar su uso, crearemos una malla simple,"
 
 #: src/visualization/plot_module.md:28
-#, fuzzy
 msgid "and an associated scalar Field,"
 msgstr "y un campo escalar asociado,"
 
 #: src/visualization/plot_module.md:32
 msgid "Meshes"
-msgstr "Mallas"
+msgstr "Meshes (Mallas)"
 
 #: src/visualization/plot_module.md:34
-#, fuzzy
 msgid "To visualize the Mesh, use the `plotmesh` function"
-msgstr "Para visualizar la malla, use la función 'plotmesh'"
+msgstr "Para visualizar la malla, use la función `plotmesh`"
 
 #: src/visualization/plot_module.md:38
-#, fuzzy
 msgid ""
 "which outputs a Graphics object, which we'll describe more fully in the "
 "[Graphics Section](graphics_module.md) below. By default, `plotmesh` shows "
@@ -3125,10 +3114,9 @@ msgid ""
 msgstr ""
 "que genera un objeto Graphics, que describiremos con más detalle en la "
 "[Sección de gráficos](graphics_module.md) a continuación. De forma "
-"predeterminada, 'plotmesh' muestra solo el elemento de grado más alto "
+"predeterminada, `plotmesh` muestra solo el elemento de grado más alto "
 "presente aquí grado 2 o facetas como se muestra en la Fig. [6.1] (#fig:"
-"TramaMalla)A. Para mostrar otras calificaciones, use la opción "
-"'calificación':"
+"TramaMalla)A. Para mostrar otras calificaciones, use la opción `grade`:"
 
 #: src/visualization/plot_module.md:46
 msgid "which shows points and edges as shown in Fig. [6.1](#fig:PlotMesh)B."
@@ -3137,29 +3125,26 @@ msgstr ""
 "PlotMesh)B."
 
 #: src/visualization/plot_module.md:49
-#, fuzzy
 msgid ""
 "You can control the color of the Mesh with the `color` option as shown in "
 "Fig. [6.1](#fig:PlotMesh)C:"
 msgstr ""
-"Puede controlar el color de la malla con la opción 'color' como se muestra "
+"Puede controlar el color de la malla con la opción `color` como se muestra "
 "en la Fig. [6.1] (#fig:TramaMesh) C:"
 
 #: src/visualization/plot_module.md:54
-#, fuzzy
 msgid ""
 "To display particular selected elements of a mesh, you can use the optional "
 "`selection` argument and supply a Selection object."
 msgstr ""
 "Para mostrar elementos seleccionados particulares de una malla, puede usar "
-"el argumento opcional 'selection' y proporcionar un objeto Selection."
+"el argumento opcional `selection` y proporcionar un objeto Selection."
 
 #: src/visualization/plot_module.md:61
 msgid "Mesh labels"
 msgstr "Etiquetas de malla"
 
 #: src/visualization/plot_module.md:77
-#, fuzzy
 msgid ""
 "It's sometimes helpful to be able to identify the id of a particular element "
 "in a Mesh, especially for debugging purposes. The `plotmeshlabels` function "
@@ -3172,7 +3157,7 @@ msgid ""
 msgstr ""
 "A veces es útil poder identificar el identificador de un elemento "
 "determinado en una malla, especialmente con fines de depuración. La función "
-"'plotmeshlabels' está diseñada para facilitar esto, como se muestra en la "
+"`plotmeshlabels` está diseñada para facilitar esto, como se muestra en la "
 "Fig. [6.2] (#fig:PlotMeshLabels). Puede seleccionar el grado para el que "
 "desea dibujar los identificadores y especificar su color, tamaño y dirección "
 "de dibujo. También es posible dar un desplazamiento, que puede ser una "
@@ -3181,13 +3166,12 @@ msgstr ""
 "poco más arriba y a la derecha:"
 
 #: src/visualization/plot_module.md:88
-#, fuzzy
 msgid ""
 "The `plotmeshlabels` function only draws labels, not the mesh itself, so we "
 "typically combine it with `plotmesh` and display both:"
 msgstr ""
-"La función 'plotmeshlabels' solo dibuja etiquetas, no la malla en sí, por lo "
-"que normalmente la combinamos con 'plotmesh' y mostramos ambas:"
+"La función `plotmeshlabels` solo dibuja etiquetas, no la malla en sí, por lo "
+"que normalmente la combinamos con `plotmesh` y mostramos ambas:"
 
 #: src/visualization/plot_module.md:94
 msgid "To show the grade 1 element ids, for example, we might use:"
@@ -6225,7 +6209,7 @@ msgid ""
 "can easily produce an infinite loop!"
 msgstr ""
 "El uso de bucles 'continue' con 'while' es posible, pero no se recomienda, "
-"ya que puede producir fácilmente un bucle infinito!."
+"ya que puede producir fácilmente un bucle infinito!"
 
 #: src/reference/nested/controlflow.md:216
 msgid ""
@@ -6399,7 +6383,7 @@ msgid ""
 "the function `foo` returns a function that captures the value of `a`. If we "
 "now try calling `foo` and then calling the returned functions,"
 msgstr ""
-"La función `foo` devuelve una función que captura el valor de `a`. Si ahora "
+"la función `foo` devuelve una función que captura el valor de `a`. Si ahora "
 "intentamos llamar a `foo` y luego llamamos a las funciones devueltas,"
 
 #: src/reference/nested/functions.md:105 src/reference/nested/builtin.md:224
@@ -10134,148 +10118,131 @@ msgid "Cylinder"
 msgstr "Cylinder"
 
 #: src/reference/nested/graphics.md:113
-#, fuzzy
 msgid ""
 "The `Cylinder` function creates a cylinder. It takes two required arguments:"
 msgstr ""
-"La función 'Cilindro' crea un cilindro. Se necesitan dos argumentos "
+"La función `Cylinder` crea un cilindro. Se necesitan dos argumentos "
 "necesarios:"
 
 #: src/reference/nested/graphics.md:119
-#, fuzzy
 msgid "`start` and `end` are the two vertices."
-msgstr "'start' y 'end' son los dos vértices."
+msgstr "`start` y `end` son los dos vértices."
 
 #: src/reference/nested/graphics.md:123
-#, fuzzy
 msgid ""
 "`aspectratio` controls the width of the cylinder relative to its length."
 msgstr ""
-"'aspectratio' controla la anchura del cilindro en relación con su longitud."
+"`aspectratio` controla la anchura del cilindro en relación con su longitud."
 
 #: src/reference/nested/graphics.md:124
-#, fuzzy
 msgid ""
 "`n` is an integer that controls the quality of the display. Higher `n` leads "
 "to a rounder cylinder."
 msgstr ""
-"'n' es un número entero que controla la calidad de la pantalla. Una 'n' más "
+"`n` es un número entero que controla la calidad de la pantalla. Una `n` más "
 "alta conduce a un cilindro más redondo."
 
 #: src/reference/nested/graphics.md:125
-#, fuzzy
 msgid ""
 "`color` is the color of the cylinder. This can be a list of RGB values or a "
 "`Color` object."
 msgstr ""
-"'color' es el color del cilindro. Puede ser una lista de valores RGB o un "
-"objeto 'Color'."
+"`color` es el color del cilindro. Puede ser una lista de valores RGB o un "
+"objeto `Color`."
 
 #: src/reference/nested/graphics.md:126
-#, fuzzy
 msgid ""
 "`transmit` sets the transparency of the cylinder. This parameter is only "
 "used by the povray module as of now. Default is 0."
 msgstr ""
-"'transmit' establece la transparencia del cilindro. Este parámetro solo es "
+"`transmit` establece la transparencia del cilindro. Este parámetro solo es "
 "utilizado por el módulo povray a partir de ahora. El valor predeterminado es "
 "0."
 
 #: src/reference/nested/graphics.md:128
-#, fuzzy
 msgid ""
 "`filter` sets the transparency of the cylinder using a filter effect. This "
 "parameter is only used by the povray module as of now. Default is 0. For the "
 "difference between `transmit` and `filter`, checkout the  [POVRay "
 "documentation](http://xahlee.info/3d/povray-glassy.html)."
 msgstr ""
-"'filter' establece la transparencia del cilindro mediante un efecto de "
+"`filter` establece la transparencia del cilindro mediante un efecto de "
 "filtro. Este parámetro solo es utilizado por el módulo povray a partir de "
 "ahora. El valor predeterminado es 0. Para conocer la diferencia entre "
 "'transmitir' y 'filtrar', consulte la [documentación de POVRay](http://"
 "xahlee.info/3d/povray-glassy.html)."
 
 #: src/reference/nested/graphics.md:132
-#, fuzzy
 msgid "Display an cylinder:"
 msgstr "Mostrar un cilindro:"
 
 #: src/reference/nested/graphics.md:140
 msgid "Tube"
-msgstr "Tubo"
+msgstr "Tube"
 
 #: src/reference/nested/graphics.md:143
-#, fuzzy
 msgid "The `Tube` function connects a sequence of points to form a tube."
-msgstr "La función 'Tubo' conecta una secuencia de puntos para formar un tubo."
+msgstr "La función `Tube` conecta una secuencia de puntos para formar un tubo."
 
 #: src/reference/nested/graphics.md:149
-#, fuzzy
 msgid ""
 "`points` is a list of points; this can be a list of lists or a `Matrix` with "
 "the positions as columns."
 msgstr ""
-"'puntos' es una lista de puntos; esto puede ser una lista de listas o una "
-"'Matriz' con las posiciones como columnas."
+"`puntos` es una lista de puntos; esto puede ser una lista de listas o una "
+"`Matriz` con las posiciones como columnas."
 
 #: src/reference/nested/graphics.md:150
-#, fuzzy
 msgid "`radius` is the radius of the tube."
-msgstr "'radius' es el radio del tubo."
+msgstr "`radius` es el radio del tubo."
 
 #: src/reference/nested/graphics.md:154
-#, fuzzy
 msgid ""
 "`n` is an integer that controls the quality of the display. Higher `n` leads "
 "to a rounder tube."
 msgstr ""
-"'n' es un número entero que controla la calidad de la pantalla. Una 'n' más "
+"`n` es un número entero que controla la calidad de la pantalla. Una 'n' más "
 "alta conduce a un tubo más redondo."
 
 #: src/reference/nested/graphics.md:155
-#, fuzzy
 msgid ""
 "`color` is the color of the tube. This can be a list of RGB values or a "
 "`Color` object."
 msgstr ""
-"'color' es el color del tubo. Puede ser una lista de valores RGB o un objeto "
-"'Color'."
+"`color` es el color del tubo. Puede ser una lista de valores RGB o un objeto "
+"`Color`."
 
 #: src/reference/nested/graphics.md:156
-#, fuzzy
 msgid ""
 "`closed` is a `bool` that indicates whether the tube should be closed to "
 "form a loop."
 msgstr ""
-"'closed' es un 'bool' que indica si el tubo debe cerrarse para formar un "
+"`closed` es un `bool` que indica si el tubo debe cerrarse para formar un "
 "bucle."
 
 #: src/reference/nested/graphics.md:157
-#, fuzzy
 msgid ""
 "`transmit` sets the transparency of the tube. This parameter is only used by "
 "the povray module as of now. Default is 0."
 msgstr ""
-"'transmit' establece la transparencia del tubo. Este parámetro solo es "
+"`transmit` establece la transparencia del tubo. Este parámetro solo es "
 "utilizado por el módulo povray a partir de ahora. El valor predeterminado es "
 "0."
 
 #: src/reference/nested/graphics.md:159
-#, fuzzy
 msgid ""
 "`filter` sets the transparency of the tube using a filter effect. This "
 "parameter is only used by the povray module as of now. Default is 0. For the "
 "difference between `transmit` and `filter`, checkout the  [POVRay "
 "documentation](http://xahlee.info/3d/povray-glassy.html)."
 msgstr ""
-"'filter' establece la transparencia del tubo mediante un efecto de filtro. "
+"`filter` establece la transparencia del tubo mediante un efecto de filtro. "
 "Este parámetro solo es utilizado por el módulo povray a partir de ahora. El "
 "valor predeterminado es 0. Para conocer la diferencia entre 'transmitir' y "
 "'filtrar', consulte la [documentación de POVRay](http://xahlee.info/3d/"
 "povray-glassy.html)."
 
 #: src/reference/nested/graphics.md:163
-#, fuzzy
 msgid "Draw a square:"
 msgstr "Dibuja un cuadrado:"
 
@@ -10284,112 +10251,96 @@ msgid "Sphere"
 msgstr "Sphere"
 
 #: src/reference/nested/graphics.md:174
-#, fuzzy
 msgid "The `Sphere` function creates a sphere."
-msgstr "La función 'Esfera' crea una esfera."
+msgstr "La función `Sphere` crea una esfera."
 
 #: src/reference/nested/graphics.md:180
-#, fuzzy
 msgid ""
 "`center` is the position of the center of the sphere; this can be a list or "
 "column `Matrix`."
 msgstr ""
-"'centro' es la posición del centro de la esfera; puede ser una lista o una "
-"columna 'Matriz'."
+"`center` es la posición del centro de la esfera; puede ser una lista o una "
+"columna `Matrix`."
 
 #: src/reference/nested/graphics.md:181
-#, fuzzy
 msgid "`radius` is the radius of the sphere"
-msgstr "'radio' es el radio de la esfera"
+msgstr "`radius` es el radio de la esfera"
 
 #: src/reference/nested/graphics.md:185
-#, fuzzy
 msgid ""
 "`color` is the color of the sphere. This can be a list of RGB values or a "
 "`Color` object."
 msgstr ""
-"'color' es el color de la esfera. Puede ser una lista de valores RGB o un "
-"objeto 'Color'."
+"`color` es el color de la esfera. Puede ser una lista de valores RGB o un "
+"objeto `Color`."
 
 #: src/reference/nested/graphics.md:186
-#, fuzzy
 msgid ""
 "`transmit` sets the transparency of the sphere. This parameter is only used "
 "by the povray module as of now. Default is 0."
 msgstr ""
-"'transmit' establece la transparencia de la esfera. Este parámetro solo es "
+"`transmit` establece la transparencia de la esfera. Este parámetro solo es "
 "utilizado por el módulo povray a partir de ahora. El valor predeterminado es "
 "0."
 
 #: src/reference/nested/graphics.md:188
-#, fuzzy
 msgid ""
 "`filter` sets the transparency of the sphere using a filter effect. This "
 "parameter is only used by the povray module as of now. Default is 0. For the "
 "difference between `transmit` and `filter`, checkout the  [POVRay "
 "documentation](http://xahlee.info/3d/povray-glassy.html)."
 msgstr ""
-"'filter' establece la transparencia de la esfera usando un efecto de filtro. "
+"`filter` establece la transparencia de la esfera usando un efecto de filtro. "
 "Este parámetro solo es utilizado por el módulo povray a partir de ahora. El "
 "valor predeterminado es 0. Para conocer la diferencia entre 'transmitir' y "
 "'filtrar', consulte la [documentación de POVRay](http://xahlee.info/3d/"
 "povray-glassy.html)."
 
 #: src/reference/nested/graphics.md:192
-#, fuzzy
 msgid "Draw some randomly sized spheres:"
 msgstr "Dibuja algunas esferas de tamaño aleatorio:"
 
 #: src/reference/nested/graphics.md:202
 msgid "Text"
-msgstr "Texto"
+msgstr "Text"
 
 #: src/reference/nested/graphics.md:205
-#, fuzzy
 msgid "A `Text` object is used to display text. "
-msgstr "Un objeto 'Text' se utiliza para mostrar texto. "
+msgstr "Un objeto `Text` se utiliza para mostrar texto. "
 
 #: src/reference/nested/graphics.md:211
-#, fuzzy
 msgid "`text` is the text to display as a string."
-msgstr "'text' es el texto que se mostrará como una cadena."
+msgstr "`text` es el texto que se mostrará como una cuerda."
 
 #: src/reference/nested/graphics.md:212
-#, fuzzy
 msgid "`position` is the position at which to display the text. "
-msgstr "'position' es la posición en la que se va a mostrar el texto. "
+msgstr "`position` es la posición en la que se va a mostrar el texto. "
 
 #: src/reference/nested/graphics.md:216
-#, fuzzy
 msgid "`color` is the color of the text. This should be a `Color` object."
-msgstr "'color' es el color del texto. Debe ser un objeto 'Color'."
+msgstr "`color` es el color del texto. Debe ser un objeto `Color`."
 
 #: src/reference/nested/graphics.md:217
-#, fuzzy
 msgid ""
 "`dirn` is the direction along which the text is drawn. This should be a "
 "`List` or a `Matrix`."
 msgstr ""
-"'dirn' es la dirección a lo largo de la cual se dibuja el texto. Debe ser "
-"una 'Lista' o una 'Matriz'."
+"`dirn` es la dirección a lo largo de la cual se dibuja el texto. Debe ser "
+"una `List` o una `Matrix`."
 
 #: src/reference/nested/graphics.md:218
-#, fuzzy
 msgid "`size` is the font size to use"
-msgstr "'size' es el tamaño de fuente que se va a utilizar"
+msgstr "`size` es el tamaño de fuente que se va a utilizar"
 
 #: src/reference/nested/graphics.md:219
-#, fuzzy
 msgid "`vertical` is the vertical direction for the text"
-msgstr "'vertical' es la dirección vertical del texto"
+msgstr "`vertical` es la dirección vertical del texto"
 
 #: src/reference/nested/graphics.md:220
-#, fuzzy
 msgid "`font` is the `Font` object to use."
-msgstr "'font' es el objeto 'Font' que se va a utilizar."
+msgstr "`font` es el objeto `Font` que se va a utilizar."
 
 #: src/reference/nested/graphics.md:222
-#, fuzzy
 msgid "Draw several pieces of text around the y axis:"
 msgstr "Dibuja varios fragmentos de texto alrededor del eje y:"
 
@@ -10398,13 +10349,12 @@ msgid "ImplicitMesh"
 msgstr "Implicitmesh (Malla implícita)"
 
 #: src/reference/nested/implicitmesh.md:7
-#, fuzzy
 msgid ""
 "The `implicitmesh` module allows you to build meshes from implicit "
 "functions. For example, the unit sphere could be specified using the "
 "function `x^2+y^2+z^2-1 == 0`."
 msgstr ""
-"El módulo 'implicitmesh' le permite construir mallas a partir de funciones "
+"El módulo `implicitmesh` le permite construir mallas a partir de funciones "
 "implícitas. Por ejemplo, la esfera unitaria podría especificarse mediante la "
 "función 'x^2+y^2+z^2-1 == 0'."
 
@@ -10433,36 +10383,32 @@ msgid "The `build` method takes a number of optional arguments:"
 msgstr "El método `build` toma una serie de argumentos opcionales:"
 
 #: src/reference/nested/implicitmesh.md:31
-#, fuzzy
 msgid ""
 "`start` - the starting point. If not provided, the value Matrix(\\[1,1,1\\]) "
 "is used."
 msgstr ""
-"'start' - el punto de partida. Si no se proporciona, se utiliza el valor "
+"`start` - el punto de partida. Si no se proporciona, se utiliza el valor "
 "Matrix(\\[1,1,1\\])."
 
 #: src/reference/nested/implicitmesh.md:32
-#, fuzzy
 msgid "`stepsize` - approximate lengthscale to use."
-msgstr "'stepsize' - escala de longitud aproximada a utilizar."
+msgstr "`stepsize` - escala de longitud aproximada a utilizar."
 
 #: src/reference/nested/implicitmesh.md:33
-#, fuzzy
 msgid ""
 "`maxiterations` - maximum number of iterations to use. If this limit is "
 "exceeded, a partially built mesh will be returned."
 msgstr ""
-"'maxiterations': número máximo de iteraciones a utilizar. Si se supera este "
+"`maxiterations`: número máximo de iteraciones a utilizar. Si se supera este "
 "límite, se devolverá una malla parcialmente construida."
 
 #: src/reference/nested/kdtree.md:7
-#, fuzzy
 msgid ""
 "The `kdtree` module implements a k-dimensional tree, a space partitioning "
 "data structure that can be used to accelerate computational geometry "
 "calculations."
 msgstr ""
-"El módulo 'kdtree' implementa un árbol k-dimensional, una estructura de "
+"El módulo `kdtree` implementa un árbol k-dimensional, una estructura de "
 "datos de partición espacial que se puede utilizar para acelerar los cálculos "
 "de geometría computacional."
 
@@ -10609,335 +10555,289 @@ msgstr ""
 "`diferencia`."
 
 #: src/reference/nested/meshgen.md:30
-#, fuzzy
 msgid "`MeshGen` accepts a number of optional arguments:"
-msgstr "'MeshGen' acepta una serie de argumentos opcionales:"
+msgstr "`MeshGen` acepta una serie de argumentos opcionales:"
 
 #: src/reference/nested/meshgen.md:32
-#, fuzzy
 msgid "`weight` A scalar weight function that controls mesh density."
 msgstr ""
-"'weight' Una función de peso escalar que controla la densidad de la malla."
+"`weight` Una función de peso escalar que controla la densidad de la malla."
 
 #: src/reference/nested/meshgen.md:33
-#, fuzzy
 msgid "`quiet` Set to `true` to suppress  `MeshGen` output."
-msgstr "'quiet' Establézcalo en 'true' para suprimir la salida de 'MeshGen'."
+msgstr "`quiet` Establécido en 'true' para suprimir la salida de `MeshGen`."
 
 #: src/reference/nested/meshgen.md:34
-#, fuzzy
 msgid "`method` a list of options that controls the method used."
-msgstr "'method' una lista de opciones que controla el método utilizado."
+msgstr "`method` una lista de opciones que controla el método utilizado."
 
 #: src/reference/nested/meshgen.md:36
-#, fuzzy
 msgid "Some method choices that are available include:"
 msgstr "Algunas opciones de métodos que están disponibles incluyen:"
 
 #: src/reference/nested/meshgen.md:38
-#, fuzzy
 msgid "`\"FixedStepSize\"` Use a fixed step size in optimization."
-msgstr "'\"FixedStepSize\"' Utilice un tamaño de paso fijo en la optimización."
+msgstr "`”FixedStepSize”` Usa un tamaño de paso fijo en la optimización."
 
 #: src/reference/nested/meshgen.md:39
-#, fuzzy
 msgid "`\"StartGrid\"` Start from a regular grid of points (the default)."
 msgstr ""
-"'\"StartGrid\"' Comienza desde una cuadrícula regular de puntos (el valor "
+"`”StartGrid”` Comienza desde una cuadrícula regular de puntos (el valor "
 "predeterminado)."
 
 #: src/reference/nested/meshgen.md:40
-#, fuzzy
 msgid "`\"StartRandom\"` Start from a randomly generated collection of points."
 msgstr ""
-"'\"StartRandom\"' Comienza a partir de una colección de puntos generada "
+"`”StartRandom”` Comienza a partir de una colección de puntos generada "
 "aleatoriamente."
 
 #: src/reference/nested/meshgen.md:42
-#, fuzzy
 msgid ""
 "There are also a number of properties of a `MeshGen` object that can be set "
 "prior to calling `build` to control the operation of the mesh generation:"
 msgstr ""
-"También hay una serie de propiedades de un objeto 'MeshGen' que se pueden "
-"establecer antes de llamar a 'build' para controlar el funcionamiento de la "
+"También hay una serie de propiedades de un objeto `MeshGen` que se pueden "
+"establecer antes de llamar a `build` para controlar el funcionamiento de la "
 "generación de malla:"
 
 #: src/reference/nested/meshgen.md:44
-#, fuzzy
 msgid "`stepsize`, `steplimit` Stepsize used internally by the `Optimizer`"
 msgstr ""
-"'stepsize', 'steplimit' Tamaño de paso utilizado internamente por el "
-"'Optimizador'"
+"`stepsize`, `steplimit` Tamaño de paso utilizado internamente por el "
+"`Optimizador`"
 
 #: src/reference/nested/meshgen.md:45
-#, fuzzy
 msgid "`fscale` an internal \"pressure\""
-msgstr "'fscale', una \"presión\" interna"
+msgstr "`fscale`, una \"presión\" interna"
 
 #: src/reference/nested/meshgen.md:46
-#, fuzzy
 msgid "`ttol` how far the vertices are allowed to move before retriangulation"
 msgstr ""
-"'ttol' hasta dónde se permite que se muevan los vértices antes de la "
+"`ttol` hasta dónde se permite que se muevan los vértices antes de la "
 "retriangulación"
 
 #: src/reference/nested/meshgen.md:47
-#, fuzzy
 msgid "`etol` energy tolerance for optimization problem"
-msgstr "Tolerancia a la energía 'etol' para el problema de optimización"
+msgstr "Tolerancia a la energía `etol` para el problema de optimización"
 
 #: src/reference/nested/meshgen.md:48
-#, fuzzy
 msgid ""
 "`maxiterations` Maximum number of iterations of minimization + "
 "retriangulation (default is 100)"
 msgstr ""
-"'maxiterations' Número máximo de iteraciones de minimización + "
+"`maxiterations` Número máximo de iteraciones de minimización + "
 "retriangulación (el valor predeterminado es 100)"
 
 #: src/reference/nested/meshgen.md:51
-#, fuzzy
 msgid "`MeshGen` picks default values that cover a reasonable range of uses."
 msgstr ""
-"'MeshGen' elige valores predeterminados que cubren un rango razonable de "
+"`MeshGen` elige valores predeterminados que cubren un rango razonable de "
 "usos."
 
 #: src/reference/nested/meshgen.md:55
 msgid "Domain"
-msgstr "Dominio"
+msgstr "Domain (Dominio)"
 
 #: src/reference/nested/meshgen.md:58
-#, fuzzy
 msgid ""
 "The `Domain` class is used to conveniently build a domain by composing "
 "simpler elements. "
 msgstr ""
-"La clase 'Domain' se utiliza para construir convenientemente un dominio "
+"La clase `Domain` se utiliza para construir convenientemente un dominio "
 "mediante la composición de elementos más simples. "
 
 #: src/reference/nested/meshgen.md:60
-#, fuzzy
 msgid ""
 "Create a `Domain` from a scalar function that is positive in the region of "
 "interest:"
 msgstr ""
-"Cree un 'Dominio' a partir de una función escalar que sea positiva en la "
+"Cree un `Dominio` a partir de una función escalar que sea positiva en la "
 "región de interés:"
 
 #: src/reference/nested/meshgen.md:66
-#, fuzzy
 msgid "You can pass it to `MeshGen` to specify the region to mesh: "
 msgstr ""
-"Puede pasarlo a 'MeshGen' para especificar la región que se va a mallar: "
+"Puede pasarlo a `MeshGen` para especificar la región que se va a mallar: "
 
 #: src/reference/nested/meshgen.md:72
-#, fuzzy
 msgid ""
 "You can combine `Domain` objects using set operations `union`, "
 "`intersection` and `difference`: "
 msgstr ""
-"Puede combinar objetos 'Dominio' utilizando las operaciones de conjunto "
-"'unión', 'intersección' y 'diferencia': "
+"Puede combinar objetos `Dominio` utilizando las operaciones de conjunto "
+"`unión`, `intersección` y `diferencia`: "
 
 #: src/reference/nested/meshgen.md:81
-#, fuzzy
 msgid "CircularDomain"
 msgstr "CircularDomain (Dominio circular)"
 
 #: src/reference/nested/meshgen.md:84
-#, fuzzy
 msgid ""
 "Conveniently constructs a `Domain` object correspondiong to a disk. Requires "
 "the position of the center and a radius as arguments. "
 msgstr ""
-"Construye convenientemente un objeto 'Dominio' correspondiente a un disco. "
+"Construye convenientemente un objeto `Domain` correspondiente a un disco. "
 "Requiere la posición del centro y un radio como argumentos. "
 
 #: src/reference/nested/meshgen.md:86
-#, fuzzy
 msgid "Create a domain corresponding to the unit disk: "
 msgstr "Cree un dominio correspondiente a la unidad de disco: "
 
 #: src/reference/nested/meshgen.md:92
-#, fuzzy
 msgid "RectangularDomain"
-msgstr "RectangularDomain"
+msgstr "RectangularDomain (Dominio Rectangular)"
 
 #: src/reference/nested/meshgen.md:95
-#, fuzzy
 msgid ""
 "Conveniently constructs a `Domain` object corresponding to a rectangle. "
 "Requires a list of ranges as arguments. Works in arbitrary dimensions"
 msgstr ""
-"Construye convenientemente un objeto 'Dominio' correspondiente a un "
+"Construye convenientemente un objeto `Domain` correspondiente a un "
 "rectángulo. Requiere una lista de rangos como argumentos. Funciona en "
 "dimensiones arbitrarias"
 
 #: src/reference/nested/meshgen.md:97
-#, fuzzy
 msgid "Create a square `Domain`:"
-msgstr "Crea un 'Dominio' cuadrado:"
+msgstr "Crea un `Domain` cuadrado:"
 
 #: src/reference/nested/meshgen.md:103
-#, fuzzy
 msgid "HalfSpaceDomain"
-msgstr "HalfSpaceDomain (Dominio de HalfSpace)"
+msgstr "HalfSpaceDomain (Dominio HalfSpace)"
 
 #: src/reference/nested/meshgen.md:106
-#, fuzzy
 msgid ""
 "Conveniently constructs a `Domain` object correspondiong to a half space "
 "defined by a plane at `x0` and a normal `n`:"
 msgstr ""
-"Construye convenientemente un objeto 'Dominio' correspondiente a un medio "
-"espacio definido por un plano en 'x0' y una 'n' normal:"
+"Construye convenientemente un objeto `Domain` correspondiente a un medio "
+"espacio definido por un plano en `x0` y una `n` normal:"
 
 #: src/reference/nested/meshgen.md:112
-#, fuzzy
 msgid ""
 "Note `n` is an \"outward\" normal, so points into the _excluded_ region."
 msgstr ""
-"Tenga en cuenta que 'n' es una normal \"externa\", por lo que apunta a la "
+"Tenga en cuenta que `n` es una normal \"externa\", por lo que apunta a la "
 "región _excluida_."
 
 #: src/reference/nested/meshgen.md:114
-#, fuzzy
 msgid "Half space corresponding to the allowed region `x<0`:"
-msgstr "Medio espacio correspondiente a la región permitida 'x<0':"
+msgstr "Medio espacio correspondiente a la región permitida `x<0`:"
 
 #: src/reference/nested/meshgen.md:120
-#, fuzzy
 msgid ""
 "Note that `HalfSpaceDomain`s cannot be meshed directly as they correspond to "
 "an infinite region. They are useful, however, for combining with other "
 "domains."
 msgstr ""
-"Tenga en cuenta que los 'HalfSpaceDomain' no se pueden mallar directamente, "
+"Tenga en cuenta que los `HalfSpaceDomain` no se pueden mallar directamente, "
 "ya que corresponden a una región infinita. Sin embargo, son útiles para "
 "combinarlos con otros dominios."
 
 #: src/reference/nested/meshgen.md:122
-#, fuzzy
 msgid ""
 "Create half a disk by cutting a `HalfSpaceDomain` from a `CircularDomain`:"
 msgstr ""
-"Cree la mitad de un disco cortando un 'HalfSpaceDomain' de un "
-"'CircularDomain':"
+"Cree la mitad de un disco cortando un `HalfSpaceDomain` de un "
+"`CircularDomain`:"
 
 #: src/reference/nested/meshgen.md:132
-#, fuzzy
 msgid "MshGnDim"
 msgstr "MshGnDim"
 
 #: src/reference/nested/meshgen.md:135
-#, fuzzy
 msgid ""
 "The `MeshGen` module currently supports 2 and 3 dimensional meshes. Higher "
 "dimensional meshing will be available in a future release; please contact "
 "the developer if you are interested in this functionality."
 msgstr ""
-"El módulo 'MeshGen' actualmente admite mallas de 2 y 3 dimensiones. El "
+"El módulo `MeshGen` actualmente admite mallas de 2 y 3 dimensiones. El "
 "mallado de mayor dimensión estará disponible en una versión futura; Póngase "
 "en contacto con el desarrollador si está interesado en esta funcionalidad."
 
 #: src/reference/nested/meshslice.md:7
-#, fuzzy
 msgid ""
 "The `meshslice` module is used to slice a `Mesh` object along a given plane, "
 "yielding a new `Mesh` object of lower dimensionality. You can also use "
 "`meshslice` to project `Field` objects onto the new mesh."
 msgstr ""
-"El módulo 'meshslice' se utiliza para cortar un objeto 'Mesh' a lo largo de "
-"un plano dado, produciendo un nuevo objeto 'Mesh' de menor dimensionalidad. "
-"También puede usar 'meshslice' para proyectar objetos 'Field' en la nueva "
+"El módulo `meshslice` se utiliza para cortar un objeto `Mesh` a lo largo de "
+"un plano dado, produciendo un nuevo objeto `Mesh` de menor dimensionalidad. "
+"También puede usar `meshslice` para proyectar objetos `Field` en la nueva "
 "malla."
 
 #: src/reference/nested/meshslice.md:9
-#, fuzzy
 msgid "To use the module, begin by importing it:"
 msgstr "Para usar el módulo, comience importándolo:"
 
 #: src/reference/nested/meshslice.md:15
-#, fuzzy
 msgid ""
 "Then construct a `MeshSlicer` object, passing the mesh you want to slice in "
 "the constructor:"
 msgstr ""
-"A continuación, construya un objeto 'MeshSlicer', pasando la malla que desea "
+"A continuación, construya un objeto `MeshSlicer`, pasando la malla que desea "
 "cortar en el constructor:"
 
 #: src/reference/nested/meshslice.md:21
-#, fuzzy
 msgid ""
 "You then perform a slice by calling the `slice` method, passing the plane "
 "you want to slice through. This method returns a new `Mesh` object "
 "comprising the slice. A plane is defined by a point that lies on the plane "
 "`pt` and a direction normal to the plan `dirn`:"
 msgstr ""
-"A continuación, realice un corte llamando al método 'slice', pasando el "
-"plano por el que desea cortar. Este método devuelve un nuevo objeto 'Mesh' "
+"A continuación, realice un corte llamando al método `slice`, pasando el "
+"plano por el que desea cortar. Este método devuelve un nuevo objeto `Mesh` "
 "que comprende el sector. Un plano está definido por un punto que se "
-"encuentra en el plano 'pt' y una dirección normal al plano 'dirn':"
+"encuentra en el plano `pt` y una dirección normal al plano `dirn`:"
 
 #: src/reference/nested/meshslice.md:27
-#, fuzzy
 msgid ""
 "Having performed a slice, you can then project any associated `Field` "
 "objects onto the sliced mesh by calling the `slicefield` method:"
 msgstr ""
 "Después de haber realizado un corte, puede proyectar cualquier objeto "
-"'Field' asociado en la malla cortada llamando al método 'slicefield':"
+"`Field` asociado en la malla cortada llamando al método `slicefield`:"
 
 #: src/reference/nested/meshslice.md:34
-#, fuzzy
 msgid ""
 "The new field returned by `slicefield` lives on the sliced mesh. You can "
 "slice any number of fields."
 msgstr ""
-"El nuevo campo devuelto por 'slicefield' vive en la malla cortada. Puede "
+"El nuevo campo devuelto por `slicefield` vive en la malla cortada. Puede "
 "segmentar cualquier número de campos."
 
 #: src/reference/nested/meshslice.md:36
-#, fuzzy
 msgid ""
 "You can perform multiple slices with the same `MeshSlicer` simply by calling "
 "`slice` again with a different plane."
 msgstr ""
-"Puede realizar varios sectores con el mismo 'MeshSlicer' simplemente "
-"llamando a 'slice' de nuevo con un plano diferente."
+"Puede realizar varios sectores con el mismo `MeshSlicer` simplemente "
+"llamando a `slice` de nuevo con un plano diferente."
 
 #: src/reference/nested/meshslice.md:38
-#, fuzzy
 msgid "SlcEmpty"
 msgstr "SlcEmpty"
 
 #: src/reference/nested/meshslice.md:41
-#, fuzzy
 msgid ""
 "This error occurs if you try to use `slicefield` on a `MeshSlicer` without "
 "having performed a slice. For example:"
 msgstr ""
-"Este error se produce si intenta usar 'slicefield' en un 'MeshSlicer' sin "
+"Este error se produce si intenta usar `slicefield` en un `MeshSlicer` sin "
 "haber realizado un segmento. Por ejemplo:"
 
 #: src/reference/nested/meshslice.md:45
-#, fuzzy
 msgid "// Throws SlcEmpty\n"
-msgstr "Lanza SlcEmpty\n"
+msgstr "// arroja SlcEmpty\n"
 
 #: src/reference/nested/meshslice.md:49
-#, fuzzy
 msgid "To fix, call `slice` before `slicefield`:"
-msgstr "Para solucionarlo, llame a 'slice' antes de 'slicefield':"
+msgstr "Para solucionarlo, llame a `slice` antes de `slicefield`:"
 
 #: src/reference/nested/meshslice.md:54
-#, fuzzy
 msgid "// Now slices correctly \n"
-msgstr "Ahora se corta correctamente \n"
+msgstr "// Ahora se corta correctamente \n"
 
 #: src/reference/nested/meshtools.md:7
-#, fuzzy
 msgid ""
 "The Meshtools package contains a number of functions and classes to assist "
 "with creating and manipulating meshes."
@@ -10946,7 +10846,6 @@ msgstr ""
 "crear y manipular mallas."
 
 #: src/reference/nested/meshtools.md:14
-#, fuzzy
 msgid ""
 "This function creates a mesh composed of triangles from a parametric "
 "function. To use it:"
@@ -10955,66 +10854,57 @@ msgstr ""
 "paramétrica. Para usarlo:"
 
 #: src/reference/nested/meshtools.md:22 src/reference/nested/meshtools.md:66
-#, fuzzy
 msgid ""
 "`function` is a parametric function that has one parameter. It should return "
 "a list of coordinates or a column matrix corresponding to this parameter."
 msgstr ""
-"'function' es una función paramétrica que tiene un parámetro. Debe devolver "
+"`function` es una función paramétrica que tiene un parámetro. Debe devolver "
 "una lista de coordenadas o una matriz de columnas correspondiente a este "
 "parámetro."
 
 #: src/reference/nested/meshtools.md:23
-#, fuzzy
 msgid ""
 "`range1` is the Range to use for the first parameter of the parametric "
 "function."
 msgstr ""
-"'range1' es el rango que se utilizará para el primer parámetro de la función "
+"`range1` es el rango que se utilizará para el primer parámetro de la función "
 "paramétrica."
 
 #: src/reference/nested/meshtools.md:24
-#, fuzzy
 msgid ""
 "`range2` is the Range to use for the second parameter of the parametric "
 "function."
 msgstr ""
-"'range2' es el rango que se usará para el segundo parámetro de la función "
+"`range2` es el rango que se usará para el segundo parámetro de la función "
 "paramétrica."
 
 #: src/reference/nested/meshtools.md:25
-#, fuzzy
 msgid ""
 "`closed` is an optional parameter indicating whether to create a closed loop "
 "or not. You can supply a list where each element indicates whether the "
 "relevant parameter is closed or not."
 msgstr ""
-"'closed' es un parámetro opcional que indica si se debe crear un bucle "
+"`closed` es un parámetro opcional que indica si se debe crear un bucle "
 "cerrado o no. Puede proporcionar una lista en la que cada elemento indique "
 "si el parámetro relevante está cerrado o no."
 
 #: src/reference/nested/meshtools.md:27
-#, fuzzy
 msgid "To use `AreaMesh`, import the `meshtools` module:"
-msgstr "Para usar 'AreaMesh', importe el módulo 'meshtools':"
+msgstr "Para usar `AreaMesh`, importe el módulo `meshtools`:"
 
 #: src/reference/nested/meshtools.md:33
-#, fuzzy
 msgid "Create a square:"
 msgstr "Crea un cuadrado:"
 
 #: src/reference/nested/meshtools.md:39
-#, fuzzy
 msgid "Create a tube:"
 msgstr "Crea un tubo:"
 
 #: src/reference/nested/meshtools.md:46
-#, fuzzy
 msgid "Create a torus:"
 msgstr "Crea un toroide:"
 
 #: src/reference/nested/meshtools.md:58
-#, fuzzy
 msgid ""
 "This function creates a mesh composed of line elements from a parametric "
 "function. To use it:"
@@ -11023,55 +10913,46 @@ msgstr ""
 "función paramétrica. Para usarlo:"
 
 #: src/reference/nested/meshtools.md:67
-#, fuzzy
 msgid "`range` is the Range to use for the parametric function."
-msgstr "'range' es el rango que se utilizará para la función paramétrica."
+msgstr "`range` es el rango que se utilizará para la función paramétrica."
 
 #: src/reference/nested/meshtools.md:68
-#, fuzzy
 msgid ""
 "`closed` is an optional parameter indicating whether to create a closed loop "
 "or not."
 msgstr ""
-"'closed' es un parámetro opcional que indica si se debe crear un bucle "
+"`closed` es un parámetro opcional que indica si se debe crear un bucle "
 "cerrado o no."
 
 #: src/reference/nested/meshtools.md:70
-#, fuzzy
 msgid "To use `LineMesh`, import the `meshtools` module:"
-msgstr "Para usar 'LineMesh', importe el módulo 'meshtools':"
+msgstr "Para usar `LineMesh`, importe el módulo `meshtools`:"
 
 #: src/reference/nested/meshtools.md:76
-#, fuzzy
 msgid "Create a circle:"
 msgstr "Crea un círculo:"
 
 #: src/reference/nested/meshtools.md:86
-#, fuzzy
 msgid "This function creates a mesh corresponding to a polyhedron. "
 msgstr "Esta función crea una malla correspondiente a un poliedro. "
 
 #: src/reference/nested/meshtools.md:92
-#, fuzzy
 msgid ""
 "where `vertices` is a list of vertices and `faces` is a list of faces "
 "specified as a list of vertex indices."
 msgstr ""
-"donde 'vértices' es una lista de vértices y 'faces' es una lista de caras "
+"donde `vértices` es una lista de vértices y `faces` es una lista de caras "
 "especificadas como una lista de índices de vértices."
 
 #: src/reference/nested/meshtools.md:94
-#, fuzzy
 msgid "To use `PolyhedronMesh`, import the `meshtools` module:"
-msgstr "Para usar 'PolyhedronMesh', importe el módulo 'meshtools':"
+msgstr "Para usar `PolyhedronMesh`, importe el módulo `meshtools`:"
 
 #: src/reference/nested/meshtools.md:100
-#, fuzzy
 msgid "Create a cube:"
 msgstr "Crea un cubo:"
 
 #: src/reference/nested/meshtools.md:111
-#, fuzzy
 msgid ""
 "_Note_ that the vertices in each face list must be specified strictly in "
 "cyclic order."
@@ -11080,28 +10961,25 @@ msgstr ""
 "estrictamente en orden cíclico."
 
 #: src/reference/nested/meshtools.md:116
-#, fuzzy
 msgid ""
 "The `DelaunayMesh` constructor function creates a `Mesh` object directly "
 "from a point cloud using the Delaunay triangulator."
 msgstr ""
-"La función constructora 'DelaunayMesh' crea un objeto 'Mesh' directamente a "
+"La función constructora `DelaunayMesh` crea un objeto `Mesh` directamente a "
 "partir de una nube de puntos utilizando el triangulador de Delaunay."
 
 #: src/reference/nested/meshtools.md:125
-#, fuzzy
 msgid ""
 "You can control the output dimension of the mesh (e.g. to create a 2D mesh "
 "embedded in 3D space) using the optional `outputdim` property. "
 msgstr ""
 "Puede controlar la dimensión de salida de la malla (por ejemplo, para crear "
 "una malla 2D incrustada en el espacio 3D) utilizando la propiedad opcional "
-"'outputdim'. "
+"`outputdim`. "
 
 #: src/reference/nested/meshtools.md:131
-#, fuzzy
 msgid "Equiangulate"
-msgstr "Equiangulado"
+msgstr "Equitriangulate (Equiangulado)"
 
 #: src/reference/nested/meshtools.md:134
 msgid ""
@@ -11116,21 +10994,18 @@ msgid "This function takes optional arguments:"
 msgstr "Esta función toma argumentos opcionales:"
 
 #: src/reference/nested/meshtools.md:142
-#, fuzzy
 msgid "`quiet`: Set to true to silence messages."
-msgstr "'quiet': Establézcalo en mensajes fieles a silencio."
+msgstr "`quiet`: Establézcalo en mensajes fieles a silencio."
 
 #: src/reference/nested/meshtools.md:143
-#, fuzzy
 msgid ""
 "`fix`: Supply a `Selection` containing edges that should not be modified by "
 "equiangulation."
 msgstr ""
-"'fix': Proporciona una 'Selección' que contiene aristas que no deben "
+"`fix`: Proporciona una 'Selección' que contiene aristas que no deben "
 "modificarse por equiangulación."
 
 #: src/reference/nested/meshtools.md:145
-#, fuzzy
 msgid ""
 "_Note_ this function modifies the mesh in place; it does not create a new "
 "mesh."
@@ -11146,72 +11021,62 @@ msgstr ""
 "que haya creado una malla en 2D que ahora desee utilizar en 3D."
 
 #: src/reference/nested/meshtools.md:152
-#, fuzzy
 msgid "To use:"
 msgstr "Utilizar:"
 
 #: src/reference/nested/meshtools.md:158
-#, fuzzy
 msgid ""
 "where `mesh` is the mesh you wish to change, and `dim` is the new embedding "
 "dimension."
 msgstr ""
-"donde 'mesh' es la malla que desea cambiar, y 'dim' es la nueva dimensión de "
+"donde `mesh` es la malla que desea cambiar, y `dim` es la nueva dimensión de "
 "incrustación."
 
 #: src/reference/nested/meshtools.md:163
-#, fuzzy
 msgid ""
 "The `MeshBuilder` class simplifies user creation of meshes. To use this "
 "class, begin by creating a `MeshBuilder` object:"
 msgstr ""
-"La clase 'MeshBuilder' simplifica la creación de mallas por parte del "
-"usuario. Para usar esta clase, comience creando un objeto 'MeshBuilder':"
+"La clase `MeshBuilder` simplifica la creación de mallas por parte del "
+"usuario. Para usar esta clase, comience creando un objeto `MeshBuilder`:"
 
 #: src/reference/nested/meshtools.md:169
-#, fuzzy
 msgid ""
 "You can then add vertices, edges, etc. one by one using `addvertex`, "
 "`addedge`, `addface` and `addelement`. Each of these returns an element id:"
 msgstr ""
 "A continuación, puede añadir vértices, aristas, etc. uno por uno utilizando "
-"'addvertex', 'addedge', 'addface' y 'addelement'. Cada uno de ellos devuelve "
+"`addvertex`, `addedge`, `addface` y `addelement`. Cada uno de ellos devuelve "
 "un identificador de elemento:"
 
 #: src/reference/nested/meshtools.md:177
-#, fuzzy
 msgid ""
 "Once the mesh is ready, call the `build` method to construct the `Mesh`:"
 msgstr ""
-"Una vez que la malla esté lista, llame al método 'build' para construir la "
-"'malla':"
+"Una vez que la malla esté lista, llame al método `build` para construir la "
+"`malla`:"
 
 #: src/reference/nested/meshtools.md:183
-#, fuzzy
 msgid ""
 "You can specify the dimension of the `Mesh` explicitly when initializing the "
 "`MeshBuilder`: "
 msgstr ""
-"Puede especificar la dimensión de la 'Malla' explícitamente al inicializar "
-"el 'MeshBuilder': "
+"Puede especificar la dimensión de la `Malla` explícitamente al inicializar "
+"el `MeshBuilder`: "
 
 #: src/reference/nested/meshtools.md:189
-#, fuzzy
 msgid "or implicitly when adding the first vertex:"
 msgstr "o implícitamente al agregar el primer vértice:"
 
 #: src/reference/nested/meshtools.md:193
-#, fuzzy
 msgid "// A 2D mesh\n"
-msgstr "Una malla 2D\n"
+msgstr "// Una malla 2D\n"
 
 #: src/reference/nested/meshtools.md:196
-#, fuzzy
 msgid "MshBldDimIncnstnt"
 msgstr "MshBldDimIncnstnt"
 
 #: src/reference/nested/meshtools.md:199
-#, fuzzy
 msgid ""
 "This error is produced if you try to add a vertex that is inconsistent with "
 "the mesh dimension, e.g."
@@ -11220,37 +11085,32 @@ msgstr ""
 "con la dimensión de la malla, p. ej."
 
 #: src/reference/nested/meshtools.md:203
-#, fuzzy
 msgid "// Throws an error! \n"
-msgstr "¡Arroja un error! \n"
+msgstr "// ¡Arroja un error! \n"
 
 #: src/reference/nested/meshtools.md:206
-#, fuzzy
 msgid "To fix this ensure all vertices have the correct dimension."
 msgstr ""
 "Para solucionar este problema, asegúrese de que todos los vértices tengan la "
 "dimensión correcta."
 
 #: src/reference/nested/meshtools.md:208
-#, fuzzy
 msgid "MshBldDimUnknwn"
 msgstr "MshBldDimUnknwn"
 
 #: src/reference/nested/meshtools.md:211
-#, fuzzy
 msgid ""
 "This error is produced if you try to add an element to a `MeshBuilder` "
 "object but haven't yet specified the dimension (at initialization) or by "
 "adding a vertex."
 msgstr ""
 "Este error se produce si intenta agregar un elemento a un objeto "
-"'MeshBuilder' pero aún no ha especificado la dimensión (en la "
+"`MeshBuilder` pero aún no ha especificado la dimensión (en la "
 "inicialización) o agregando un vértice."
 
 #: src/reference/nested/meshtools.md:215
-#, fuzzy
 msgid "// No vertices have been added \n"
-msgstr "No se han agregado vértices \n"
+msgstr "// No se han agregado vértices \n"
 
 #: src/reference/nested/meshtools.md:218
 msgid "To fix this add the vertices first."
@@ -11261,90 +11121,79 @@ msgid "MeshRefiner"
 msgstr "MeshRefiner"
 
 #: src/reference/nested/meshtools.md:223
-#, fuzzy
 msgid ""
 "The `MeshRefiner` class is used to refine meshes, and to correct associated "
 "data structures that depend on the mesh."
 msgstr ""
-"La clase 'MeshRefiner' se utiliza para refinar las mallas y para corregir "
+"La clase `MeshRefiner` se utiliza para refinar las mallas y para corregir "
 "las estructuras de datos asociadas que dependen de la malla."
 
 #: src/reference/nested/meshtools.md:225
-#, fuzzy
 msgid ""
 "To prepare for refining, first create a `MeshRefiner` object either with a "
 "`Mesh`,"
 msgstr ""
-"Para prepararse para el refinamiento, primero cree un objeto 'MeshRefiner' "
-"con un objeto 'Mesh',"
+"Para prepararse para el refinamiento, primero cree un objeto `MeshRefiner` "
+"con un objeto `Mesh`,"
 
 #: src/reference/nested/meshtools.md:231 src/reference/nested/meshtools.md:266
-#, fuzzy
 msgid ""
 "or with a list of objects that can include a `Mesh` as well as `Field`s and "
 "`Selection`s."
 msgstr ""
-"o con una lista de objetos que puede incluir una 'Malla', así como 'Campos' "
-"y 'Selección'."
+"o con una lista de objetos que puede incluir una `Mesh`, así como `Field` y "
+"'Selection`."
 
 #: src/reference/nested/meshtools.md:237
-#, fuzzy
 msgid ""
 "To perform the refinement, call the `refine` method. You can refine all "
 "elements,"
 msgstr ""
-"Para realizar el refinamiento, llame al método 'refinar'. Puedes refinar "
+"Para realizar el refinamiento, llame al método `refine`. Puedes refinar "
 "todos los elementos,"
 
 #: src/reference/nested/meshtools.md:243
-#, fuzzy
 msgid "or refine selected elements using a `Selection`,"
-msgstr "o refinar los elementos seleccionados usando una 'Selección',"
+msgstr "o refinar los elementos seleccionados usando una `Selección`,"
 
 #: src/reference/nested/meshtools.md:249
-#, fuzzy
 msgid ""
 "The `refine` method returns a `Dictionary` that maps old objects to new, "
 "refined objects. Use this to update your data structures."
 msgstr ""
-"El método 'refine' devuelve un 'Diccionario' que asigna objetos antiguos a "
+"El método `refine` devuelve un `Dictionary` que asigna objetos antiguos a "
 "objetos nuevos y refinados. Utilícelo para actualizar sus estructuras de "
 "datos."
 
 #: src/reference/nested/meshtools.md:255
-#, fuzzy
 msgid "MeshPruner"
-msgstr "Podadora de malla"
+msgstr "MeshPruner"
 
 #: src/reference/nested/meshtools.md:258
-#, fuzzy
 msgid ""
 "The `MeshPruner` class is used to prune excessive detail from meshes (a "
 "process that's sometimes referred to as coarsening), and to correct "
 "associated data structures that depend on the mesh."
 msgstr ""
-"La clase 'MeshPruner' se usa para podar detalles excesivos de las mallas (un "
+"La clase `MeshPruner` se usa para podar detalles excesivos de las mallas (un "
 "proceso que a veces se denomina engrosado) y para corregir estructuras de "
 "datos asociadas que dependen de la malla."
 
 #: src/reference/nested/meshtools.md:260
-#, fuzzy
 msgid "First create a `MeshPruner` object either with a `Mesh`,"
-msgstr "Primero cree un objeto 'MeshPruner' ya sea con un 'Mesh',"
+msgstr "Primero cree un objeto `MeshPruner` ya sea con un `Mesh`,"
 
 #: src/reference/nested/meshtools.md:272
-#, fuzzy
 msgid "To perform the coarsening, call the `prune` method with a `Selection`,"
 msgstr ""
-"Para realizar el engrosado, llame al método 'podar' con una 'Selección',"
+"Para realizar el engrosado, llame al método `prune` con una `Selección`,"
 
 #: src/reference/nested/meshtools.md:278
-#, fuzzy
 msgid ""
 "The `prune` method returns a `Dictionary` that maps old objects to new, "
 "refined objects. Use this to update your data structures."
 msgstr ""
-"El método 'prune' devuelve un 'Diccionario' que asigna objetos antiguos a "
+"El método `prune` devuelve un `Dictionary` que asigna objetos antiguos a "
 "objetos nuevos y refinados. Utilícelo para actualizar sus estructuras de "
 "datos."
 
@@ -11353,53 +11202,47 @@ msgid "MeshMerge"
 msgstr "MeshMerge"
 
 #: src/reference/nested/meshtools.md:288
-#, fuzzy
 msgid ""
 "The `MeshMerge` class is used to combine meshes into a single mesh, removing "
 "any duplicate elements."
 msgstr ""
-"La clase 'MeshMerge' se utiliza para combinar mallas en una sola malla, "
+"La clase `MeshMerge` se utiliza para combinar mallas en una sola malla, "
 "eliminando cualquier elemento duplicado."
 
 #: src/reference/nested/meshtools.md:290
-#, fuzzy
 msgid "To use, create a `MeshMerge` object with a list of meshes to merge,"
 msgstr ""
-"Para usarlo, cree un objeto 'MeshMerge' con una lista de mallas para "
+"Para usarlo, cree un objeto `MeshMerge` con una lista de mallas para "
 "fusionar,"
 
 #: src/reference/nested/meshtools.md:296
-#, fuzzy
 msgid "and then call the `merge` method to return a combined mesh:"
-msgstr "y luego llame al método 'merge' para devolver una malla combinada:"
+msgstr "y luego llame al método `merge` para devolver una malla combinada:"
 
 #: src/reference/nested/optimize.md:7
-#, fuzzy
 msgid ""
 "The `optimize` package contains a number of functions and classes to perform "
 "shape optimization."
 msgstr ""
-"El paquete 'optimize' contiene una serie de funciones y clases para realizar "
+"El paquete `optimize` contiene una serie de funciones y clases para realizar "
 "la optimización de formas."
 
 #: src/reference/nested/optimize.md:11
 msgid "OptimizationProblem"
-msgstr "Problema de optimización"
+msgstr "OptimizationProblem (Problema de optimización)"
 
 #: src/reference/nested/optimize.md:14
-#, fuzzy
 msgid ""
 "An `OptimizationProblem` object defines an optimization problem, which may "
 "include functionals to optimize as well as global and local constraints."
 msgstr ""
-"Un objeto 'OptimizationProblem' define un problema de optimización, que "
+"Un objeto `OptimizationProblem` define un problema de optimización, que "
 "puede incluir funcionalidades para optimizar, así como restricciones "
 "globales y locales."
 
 #: src/reference/nested/optimize.md:16
-#, fuzzy
 msgid "Create an `OptimizationProblem` with a mesh:"
-msgstr "Cree un 'OptimizationProblem' con una malla:"
+msgstr "Cree un `OptimizationProblem` con una malla:"
 
 #: src/reference/nested/optimize.md:22
 msgid "Add an energy:"
@@ -11425,142 +11268,121 @@ msgstr ""
 
 #: src/reference/nested/optimize.md:48
 msgid "Optimizer"
-msgstr "Optimizador"
+msgstr "Optimizer (Optimizador)"
 
 #: src/reference/nested/optimize.md:51
-#, fuzzy
 msgid ""
 "`Optimizer` objects are used to optimize `Mesh`es and `Field`s. You should "
 "use the appropriate subclass: `ShapeOptimizer` or `FieldOptimizer` "
 "respectively."
 msgstr ""
-"Los objetos 'Optimizer' se utilizan para optimizar 'Mesh' y 'Field's. Debe "
-"usar la subclase adecuada: 'ShapeOptimizer' o 'FieldOptimizer' "
+"Los objetos `Optimizer` se utilizan para optimizar `Mesh` y `Field`s. Debe "
+"usar la subclase adecuada: `ShapeOptimizer` o `FieldOptimizer` "
 "respectivamente."
 
 #: src/reference/nested/optimize.md:55
-#, fuzzy
 msgid "ShapeOptimizer"
-msgstr "Optimizador de formas"
+msgstr "Shape Optimizer (Optimizador de formas)"
 
 #: src/reference/nested/optimize.md:58
-#, fuzzy
 msgid ""
 "A `ShapeOptimizer` object performs shape optimization: it moves the vertex "
 "positions to reduce an overall energy."
 msgstr ""
-"Un objeto 'ShapeOptimizer' realiza la optimización de la forma: mueve las "
+"Un objeto `ShapeOptimizer` realiza la optimización de la forma: mueve las "
 "posiciones de los vértices para reducir la energía total."
 
 #: src/reference/nested/optimize.md:60
-#, fuzzy
 msgid ""
 "Create a `ShapeOptimizer` object with an `OptimizationProblem` and a `Mesh`:"
 msgstr ""
-"Cree un objeto 'ShapeOptimizer' con un 'OptimizationProblem' y un 'Mesh':"
+"Cree un objeto `ShapeOptimizer` con un `OptimizationProblem` y un `Mesh`:"
 
 #: src/reference/nested/optimize.md:66
-#, fuzzy
 msgid "Take a step down the gradient with fixed stepsize:"
 msgstr "Da un paso hacia abajo en el gradiente con un tamaño de paso fijo:"
 
 #: src/reference/nested/optimize.md:69
-#, fuzzy
 msgid "// Takes five steps\n"
-msgstr "Da cinco pasos\n"
+msgstr "// Da cinco pasos\n"
 
 #: src/reference/nested/optimize.md:72
-#, fuzzy
 msgid "Linesearch down the gradient:"
 msgstr "Búsqueda de líneas por el gradiente:"
 
 #: src/reference/nested/optimize.md:75
-#, fuzzy
 msgid "// Performs five linesearches\n"
-msgstr "Realiza cinco búsquedas de línea\n"
+msgstr "// Realiza cinco búsquedas de línea\n"
 
 #: src/reference/nested/optimize.md:78
-#, fuzzy
 msgid "Perform conjugate gradient (usually gives faster convergence):"
 msgstr ""
 "Realice un gradiente conjugado (generalmente da una convergencia más rápida):"
 
 #: src/reference/nested/optimize.md:81
-#, fuzzy
 msgid "// Performs five conjugate gradient steps.\n"
-msgstr "Realiza cinco pasos de gradiente conjugado.\n"
+msgstr "// Realiza cinco pasos de gradiente conjugado.\n"
 
 #: src/reference/nested/optimize.md:84
-#, fuzzy
 msgid "Control a number of properties of the optimizer:"
 msgstr "Controle una serie de propiedades del optimizador:"
 
 #: src/reference/nested/optimize.md:87
-#, fuzzy
 msgid "// The stepsize to take\n"
-msgstr "El tamaño del paso a tomar\n"
+msgstr "// El tamaño del paso a tomar\n"
 
 #: src/reference/nested/optimize.md:88
-#, fuzzy
 msgid "// Maximum stepsize for optimizing methods\n"
-msgstr "Tamaño máximo de paso para optimizar métodos\n"
+msgstr "// Tamaño máximo de paso para optimizar métodos\n"
 
 #: src/reference/nested/optimize.md:89
-#, fuzzy
 msgid "// Energy convergence tolerance\n"
-msgstr "Tolerancia a la convergencia energética\n"
+msgstr "// Tolerancia a la convergencia energética\n"
 
 #: src/reference/nested/optimize.md:90
-#, fuzzy
 msgid "// Tolerance to which constraints are satisfied\n"
-msgstr "Tolerancia a la que se satisfacen las restricciones\n"
+msgstr "// Tolerancia a la que se satisfacen las restricciones\n"
 
 #: src/reference/nested/optimize.md:91
-#, fuzzy
 msgid "// Maximum number of constraint steps to use\n"
-msgstr "Número máximo de pasos de restricción que se van a utilizar\n"
+msgstr "// Número máximo de pasos de restricción que se van a utilizar\n"
 
 #: src/reference/nested/optimize.md:94
-#, fuzzy
 msgid "FieldOptimizer"
-msgstr "Optimizador de campo"
+msgstr "FieldOptimizer (Optimizador de campo)"
 
 #: src/reference/nested/optimize.md:97
-#, fuzzy
 msgid ""
 "A `FieldOptimizer` object performs field optimization: it changes elements "
 "of a `Field` to reduce an overall energy."
 msgstr ""
-"Un objeto 'FieldOptimizer' realiza la optimización del campo: cambia los "
-"elementos de un 'Campo' para reducir la energía total."
+"Un objeto `FieldOptimizer` realiza la optimización del campo: cambia los "
+"elementos de un `Field` para reducir la energía total."
 
 #: src/reference/nested/optimize.md:99
-#, fuzzy
 msgid ""
 "Create a `FieldOptimizer` object with an `OptimizationProblem` and a `Field`:"
 msgstr ""
-"Cree un objeto 'FieldOptimizer' con un 'OptimizationProblem' y un 'Field':"
+"Cree un objeto `FieldOptimizer` con un `OptimizationProblem` y un `Field`:"
 
 #: src/reference/nested/optimize.md:105
-#, fuzzy
 msgid ""
 "Field optimizers provide the same options and methods as Shape optimizers: "
 "see the `ShapeOptimizer` documentation for details."
 msgstr ""
 "Los optimizadores de campo proporcionan las mismas opciones y métodos que "
-"los optimizadores de formas: consulte la documentación de 'ShapeOptimizer' "
+"los optimizadores de formas: consulte la documentación de `ShapeOptimizer` "
 "para obtener más detalles."
 
 #: src/reference/nested/plot.md:7
-#, fuzzy
 msgid ""
 "The `plot` module provides visualization capabilities for Meshes, Selections "
 "and Fields. These functions produce Graphics objects that can be displayed "
 "with `Show`."
 msgstr ""
-"El módulo 'plot' proporciona capacidades de visualización para mallas, "
+"El módulo `plot` proporciona capacidades de visualización para mallas, "
 "selecciones y campos. Estas funciones producen objetos gráficos que se "
-"pueden mostrar con 'Show'."
+"pueden mostrar con `Show`."
 
 #: src/reference/nested/plot.md:17
 msgid "Plotmesh"
