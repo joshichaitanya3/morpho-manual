@@ -1,4 +1,4 @@
-![image](Figures/morphologo.pdf)
+![image](Figures/morphologosmall.png)
 ## Version 0.6.0
 
 

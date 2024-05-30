@@ -4,6 +4,7 @@ src/Figures/**/*.png
 src/Figures/**/*.pov
 !src/Figures/*.png 
 *.DS_Store
+# Translation stuff
 po/*.po~
 po/*.pot
 po/*.mo
