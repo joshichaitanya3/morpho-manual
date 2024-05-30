@@ -30,3 +30,11 @@ mdbook serve --open
 # Contributing
 
 Contributions are absolutely welcome! If you find any errors or have any suggestions, please open an issue or a pull request.
+
+# Translations
+
+This manual is now available in Spanish as well, thanks to the wonderful contribution of [Emmanuel Flores](https://github.com/emmanuellfc)! The translation can be accessed on any page of the manual by clicking on the Globe icon in the top right and toggling between the languages.
+
+Please get in touch with me if you want to suggest edits, or add in a a new translation! 
+
+I have documented more general instructions for setting up, adding and testing translation in the mdBook environment [in a separate repository here](https://github.com/joshichaitanya3/mdbook-translate-template).
