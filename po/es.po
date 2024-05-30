@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Morpho Manual\n"
 "POT-Creation-Date: 2024-05-15T17:45:18-04:00\n"
-"PO-Revision-Date: 2024-05-30 09:51-0600\n"
+"PO-Revision-Date: 2024-05-30 12:03-0400\n"
 "Last-Translator: Emmanuel Flores <eq.emmanuel.137@gmail.com>\n"
 "Language-Team: Spanish <es@tp.org.es>\n"
 "Language: es\n"
@@ -390,7 +390,7 @@ msgstr "_ad mea perpetuum deducite tempora carmen!_"
 
 #: src/foreword.md:13
 msgid "\\--- Ovid, _Metamorphoses_"
-msgstr "\\— Ovid, _Metamorphoses_"
+msgstr "\\--- Ovid, _Metamorphoses_"
 
 #: src/foreword.md:15
 msgid "Acknowledgements"
